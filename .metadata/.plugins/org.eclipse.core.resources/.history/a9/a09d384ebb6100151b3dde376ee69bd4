@@ -104,7 +104,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			 	 	    <form method="post" action="register-success.html">
 					    	<div>
 						    	<span><label>First Name</label></span>
-						    	<span><input name="fName" type="text" class="textbox"></span>
+						    	<span><input name="fName" type="text" class="form-control"></span>
 						    </div>
 						    <div>
 						    	<span><label>Last Name</label></span>
@@ -112,15 +112,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    </div>
 						    <div>
 						    	<span><label>E-mail</label></span>
-						    	<span><input name="userEmail" type="email" class="textbox"></span>
+						    	<span><input name="userEmail" type="email" class="form-control"></span>
 						    </div>
 						    <div>
 						     	<span><label>Password</label></span>
-						    	<span><input name="password" type="password" class="textbox"></span>
+						    	<span><input name="password" type="password" class="form-control"></span>
 						    </div>
 						    <div>
 						     	<span><label>Password</label></span>
-						    	<span><input name="passwordConf" type="password" class="textbox"></span>
+						    	<span><input name="passwordConf" type="password" class="form-control"></span>
 						    </div>
 						   <div>
 						   		<span><input type="submit" class="" value="Sign Up"></span>
