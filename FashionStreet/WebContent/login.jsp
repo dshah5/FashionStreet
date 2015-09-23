@@ -97,7 +97,7 @@
 	 	 <div class="contact">				
 				  <div class="contact-form">
 				  
-				        <%= request.getParameter("errmessage") %> 
+				        <%= request.getAttribute("errmessage") %> 
 			 	  	 	<h2>Log In</h2>
 			 	 	    <form method="post" action="login">
 			 	 	        
