@@ -98,7 +98,7 @@
 				<li><a href="index.html">mens store</a></li> |
 				<li><a href="shoes.html">shoes</a></li> |
 				<li><a href="sale.html">vintage</a></li> |
-				<li><a href="service.html">services</a></li> 
+				<li><a href="login.jsp">login</a></li>
 			</ul>
 		</div>
 		<div class="top-nav">
@@ -110,7 +110,7 @@
 							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
 							<li class="nav-item"><a href="accessories.html">Accessories</a></li>
 							<li class="nav-item"><a href="shoes.html">Shoes</a></li>
-							<li class="nav-item"><a href="service.html">Services</a></li>
+							<li class="nav-item"><a href="login.jsp">Login</a></li>
 	                 </ul>
 	           </nav>
 	             <div class="search_box">
