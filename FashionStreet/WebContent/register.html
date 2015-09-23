@@ -98,29 +98,46 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="main_bg">
 <div class="wrap">	
 <div class="main">
+
+	<script type="text/javascript">
+    	function validateForm(){
+    		var a=document.form.lname.value;
+    		var b=document.form.password.value;
+    		var c=document.form.fname.value;
+    		var d=document.form.email.value;
+    		var e=document.form.cpassword.value;
+    		if (a==null || a=="" || b==null || b=="" || c==null || c=="" || d==null || d=="" || e==null || e==""){
+      			alert("Please Fill All Required Fields");
+      			return false;
+      		} else if (e != b) {
+      			alert("Passwords do not match.");
+      			return false;
+      		}
+    	}
+    </script>
 	 	 <div class="contact">				
 				  <div class="contact-form">
 			 	  	 	<h2>Sign Up Today!</h2>
-			 	 	    <form method="post" action="register-success.html">
+			 	 	    <form method="post" name="form"  onsubmit="return validateForm()" action="register">
 					    	<div>
 						    	<span><label>First Name</label></span>
-						    	<span><input name="fName" type="text" class="textbox"></span>
+						    	<span><input name="fname" type="text" id="fname" value="" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>Last Name</label></span>
-						    	<span><input name="lName" type="text" class="textbox"></span>
+						    	<span><input name="lname" type="text" id="lname" value="" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>E-mail</label></span>
-						    	<span><input name="userEmail" type="email" class="textbox"></span>
+						    	<span><input name="email" type="email" id="email" value="" class="textbox"></span>
 						    </div>
 						    <div>
 						     	<span><label>Password</label></span>
-						    	<span><input name="password" type="password" class="textbox"></span>
+						    	<span><input name="password" type="password" id="password" value="" class="textbox"></span>
 						    </div>
 						    <div>
-						     	<span><label>Password</label></span>
-						    	<span><input name="passwordConf" type="password" class="textbox"></span>
+						     	<span><label>Confirm Password</label></span>
+						    	<span><input name="cpassword" type="password" id="cpassword" value="" class="textbox"></span>
 						    </div>
 						   <div>
 						   		<span><input type="submit" class="" value="Sign Up"></span>
@@ -131,6 +148,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			  </div>
 		</div>
 </div>
+
 </div>		
 <!-- start footer -->
 <div class="footer_bg">
