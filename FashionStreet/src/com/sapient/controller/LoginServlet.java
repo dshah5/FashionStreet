@@ -1,6 +1,7 @@
 package com.sapient.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -38,6 +39,8 @@ public class LoginServlet extends HttpServlet {
 		String username= request.getParameter("uname");
 		String password= request.getParameter("pword");
 		
+		PrintWriter out = response.getWriter();
+		
 		User user=new User();
 		
 		user.setUsername(username);
@@ -46,9 +49,17 @@ public class LoginServlet extends HttpServlet {
 		
 		if(status) {
 			request.getRequestDispatcher("index.html").forward(request, response);
+			
 		}
 		else {
-			request.getRequestDispatcher("login.html").forward(request, response);
+			
+			request.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Enter"
+					+ "correct username or password"+"</p>");
+			
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+			
+				
+
 		}
 	}
 
