@@ -104,11 +104,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			 	 	    <form method="post" action="register-success.html">
 					    	<div>
 						    	<span><label>First Name</label></span>
-						    	<span><input name="fName" type="email" class="textbox"></span>
+						    	<span><input name="fName" type="text" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>Last Name</label></span>
-						    	<span><input name="lName" type="email" class="textbox"></span>
+						    	<span><input name="lName" type="text" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>E-mail</label></span>
