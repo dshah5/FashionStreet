@@ -35,12 +35,21 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String username= request.getParameter("userName");
+		String username= request.getParameter("uname");
 		String password= request.getParameter("pword");
 		
 		User user=new User();
 		
-		boolean s
+		user.setUsername(username);
+		
+		boolean status = user.validateLogin(username, password);
+		
+		if(status) {
+			request.getRequestDispatcher("index.html").forward(request, response);
+		}
+		else {
+			request.getRequestDispatcher("login.html").forward(request, response);
+		}
 	}
 
 }
