@@ -174,7 +174,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div id="portfoliolist">
 			<div class="portfolio logo1" data-cat="logo">
 				<div class="portfolio-wrapper">				
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic1.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -188,7 +188,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>				
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">			
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic2.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -202,7 +202,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>		
 			<div class="portfolio web" data-cat="web">
 				<div class="portfolio-wrapper">						
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic3.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -216,7 +216,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>				
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic4.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -230,7 +230,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>	
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic5.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -244,7 +244,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>			
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic6.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -258,7 +258,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>	
 			<div class="portfolio web" data-cat="web">
 				<div class="portfolio-wrapper">						
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic7.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -272,7 +272,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>				
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic8.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -286,7 +286,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>	
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic9.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -300,7 +300,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>			
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic10.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -315,7 +315,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic11.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -330,7 +330,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div class="portfolio logo1" data-cat="logo">
 				<div class="portfolio-wrapper">			
-					<a  href="details.html">
+					<a  href="details.jsp">
 						<img src="images/sale_pic12.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -359,16 +359,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- start grids_of_4 -->	
 		<div class="grids_of_4">
 			<div class="grid1_of_4">
-				<h4><a href="contact.html">Contact Us</a></h4>
+				<h4><a href="contact.jsp">Contact Us</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.html">About F Street</a></h4>
+				<h4><a href="service.jsp">About F Street</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.html">Common Questions</a></h4>
+				<h4><a href="service.jsp">Common Questions</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="contact.html">Store Locator</a></h4>
+				<h4><a href="contact.jsp">Store Locator</a></h4>
 			</div>
 			<div class="clear"></div>
 		</div>

@@ -189,16 +189,16 @@
 		<!-- start grids_of_4 -->	
 		<div class="grids_of_4">
 			<div class="grid1_of_4">
-				<h4><a href="contact.html">Contact Us</a></h4>
+				<h4><a href="contact.jsp">Contact Us</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.html">About F Street</a></h4>
+				<h4><a href="service.jsp">About F Street</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.html">Common Questions</a></h4>
+				<h4><a href="service.jsp">Common Questions</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="contact.html">Store Locator</a></h4>
+				<h4><a href="contact.jsp">Store Locator</a></h4>
 			</div>
 			<div class="clear"></div>
 		</div>

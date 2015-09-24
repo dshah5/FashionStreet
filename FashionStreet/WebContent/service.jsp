@@ -122,36 +122,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
 			<div class="ser-grid">
 				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon1.png" alt=""></a>
-					<h5><a href="details.html">24/7 customer support</a></h5>
+					<a href="details.jsp"><img src="images/icon1.png" alt=""></a>
+					<h5><a href="details.jsp">24/7 customer support</a></h5>
 					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
 				</div>
 				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon2.png" alt=""></a>
-					<h5><a href="details.html">hygienic branded</a></h5>
+					<a href="details.jsp"><img src="images/icon2.png" alt=""></a>
+					<h5><a href="details.jsp">hygienic branded</a></h5>
 					<p class="para"> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
 				</div>
 				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon3.png" alt=""></a>
-					<h5><a href="details.html">safely dispatch</a></h5>
+					<a href="details.jsp"><img src="images/icon3.png" alt=""></a>
+					<h5><a href="details.jsp">safely dispatch</a></h5>
 					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
 				</div>
 				<div class="clear"></div>
 			</div>
 			<div class="ser-grid">
 				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon4.png" alt=""></a>
-					<h5><a href="details.html">100% look book</a></h5>
+					<a href="details.jsp"><img src="images/icon4.png" alt=""></a>
+					<h5><a href="details.jsp">100% look book</a></h5>
 					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
 				</div>
 				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon5.png" alt=""></a>
-					<h5><a href="details.html">authentic products</a></h5>
+					<a href="details.jsp"><img src="images/icon5.png" alt=""></a>
+					<h5><a href="details.jsp">authentic products</a></h5>
 					<p class="para"> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
 				</div>
 				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon6.png" alt=""></a>
-					<h5><a href="details.html">100% guarantee</a></h5>
+					<a href="details.jsp"><img src="images/icon6.png" alt=""></a>
+					<h5><a href="details.jsp">100% guarantee</a></h5>
 					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
 				</div>
 				<div class="clear"></div>
@@ -191,16 +191,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- start grids_of_4 -->	
 		<div class="grids_of_4">
 			<div class="grid1_of_4">
-				<h4><a href="contact.html">Contact Us</a></h4>
+				<h4><a href="contact.jsp">Contact Us</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.html">About F Street</a></h4>
+				<h4><a href="service.jsp">About F Street</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.html">Common Questions</a></h4>
+				<h4><a href="service.jsp">Common Questions</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="contact.html">Store Locator</a></h4>
+				<h4><a href="contact.jsp">Store Locator</a></h4>
 			</div>
 			<div class="clear"></div>
 		</div>
