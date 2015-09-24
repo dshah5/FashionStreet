@@ -1,15 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+     <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
+<!DOCTYPE html>
 <html>
 <head>
+
 <title>Fashion Street</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -27,8 +22,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		});
 	</script>
-
 </head>
+
 <body>
 <!-- start header -->
 <jsp:useBean id="userBean" class="com.sapient.model.User" scope="session"></jsp:useBean>
@@ -36,7 +31,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
+			<a href="index.html"><img src="images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
@@ -115,75 +110,78 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="main_bg">
 <div class="wrap">	
 	<div class="main">
-	<!-- start service -->
-	  <div class="service">
-		<div class="ser-main">
-			<h4>Our Services</h4>
-			<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-			<div class="ser-grid">
-				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon1.png" alt=""></a>
-					<h5><a href="details.html">24/7 customer support</a></h5>
-					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
-				</div>
-				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon2.png" alt=""></a>
-					<h5><a href="details.html">hygienic branded</a></h5>
-					<p class="para"> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-				</div>
-				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon3.png" alt=""></a>
-					<h5><a href="details.html">safely dispatch</a></h5>
-					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="ser-grid">
-				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon4.png" alt=""></a>
-					<h5><a href="details.html">100% look book</a></h5>
-					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
-				</div>
-				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon5.png" alt=""></a>
-					<h5><a href="details.html">authentic products</a></h5>
-					<p class="para"> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-				</div>
-				<div class="ser-grid-list">
-					<a href="details.html"><img src="images/icon6.png" alt=""></a>
-					<h5><a href="details.html">100% guarantee</a></h5>
-					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-		<div class="left_sidebar">
-					<div class="sellers">
-						<h4>Best Sellers</h4>
-						<div class="single-nav">
-			                <ul>
-			                   <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>			                    
-			                </ul>
-			              </div>
+		<h2 class="style top">featured jewellery</h2>
+		<!-- start grids_of_3 -->
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/NI006.jpg" alt=""/>
+					<h3>branded jewellery</h3>
+					<div class="price">
+						<h4>$299<span>indulge</span></h4>
 					</div>
-				</div>
-				<div class="clear"></div>
+					<span class="b_btm"></span>
+				</a>
 			</div>
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/NI005.jpg" alt=""/>
+					<h3>branded jewellery</h3>
+					<div class="price">
+						<h4>$299 <span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/NI001.jpg" alt=""/>
+					<h3>branded jewellry</h3>
+					<div class="price">
+						<h4>$299<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/NI002.jpg" alt=""/>
+					<h3>branded jewellry</h3>
+					<div class="price">
+						<h4>$299<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/NI003.jpg" alt=""/>
+					<h3>branded jewellry</h3>
+					<div class="price">
+						<h4>$299<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/NI004.jpg" alt=""/>
+					<h3>branded jewellry</h3>
+					<div class="price">
+						<h4>$299<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>	
+		<!-- end grids_of_3 -->
 	</div>
 </div>
-</div>		
+</div>	
 <!-- start footer -->
 <div class="footer_bg">
 <div class="wrap">	

@@ -103,9 +103,7 @@
 				<c:choose>
     				<c:when test="${not empty name}">
        					<li><a href="profile.jsp">${name}</a></li> |
-    					<form action="logout" method="post">
-    						<input type="submit" value="Logout" />
-						</form>
+    					<li><a href="logout">logout</a></li>
     					
     				</c:when>
     				<c:otherwise>
