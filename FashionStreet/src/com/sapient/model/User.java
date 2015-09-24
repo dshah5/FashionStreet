@@ -189,5 +189,12 @@ public class User implements Serializable {
 		}
 		
 	}
+	
+	public boolean validateName(String fname,String lname) {
+		if(fname.matches("[a-zA-Z]+")&&lname.matches("[a-zA-z]")) {
+			return true;
+		}
+		else return false;
+	}
 
 }
