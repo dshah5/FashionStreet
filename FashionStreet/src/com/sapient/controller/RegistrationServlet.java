@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sapient.model.User;
+
 
 /**
  * Servlet implementation class RegistrationServlet
@@ -37,13 +39,39 @@ public class RegistrationServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		emails.add("dlredmond@gatech.edu");
+	//	emails.add("dlredmond@gatech.edu");
 		PrintWriter out = response.getWriter();
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
+		User user=new User();
+		
+		boolean status = user.isEmailRegistered(email);
+		
+		
+		request.setAttribute("userBean", user);
+		if(status) {
+			request.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Email"
+					+ "already registered"+"</p>");
+			
+			request.getRequestDispatcher("register.jsp").forward(request, response);
+			
+			
+		}
+		else {
+			
+			
+			user.updateUser(email, password, fname, lname);
+			request.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Succussful"
+					+ "registration. please login"+"</p>");
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+			
+		}
+		
+		
+		/*
 		for (String existing:emails){
 			if (email.equals(existing)){
 				   out.println("<script type=\"text/javascript\">");
@@ -52,6 +80,7 @@ public class RegistrationServlet extends HttpServlet {
 				   out.println("</script>");   
 			}
 		}
+		*/
 	}
 
 }

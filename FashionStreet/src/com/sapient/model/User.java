@@ -107,4 +107,125 @@ public class User implements Serializable {
 		return false;
 	}
 
+	public boolean isEmailRegistered(String email) {
+
+		Context ctx = null;
+		Connection con = null;
+
+		PreparedStatement ps = null;
+
+		ResultSet rs = null;
+
+		try {
+
+			// Lookup for dataSource
+			ctx = new InitialContext();
+			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/userDB");
+
+			// obtain a connection
+			con = ds.getConnection();
+
+			ps = con.prepareStatement("SELECT EMAIL FROM USERS WHERE EMAIL=?");
+
+			ps.setString(1, email);
+
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				return true;
+			} else
+				return false;
+		} catch (NamingException e) {
+
+			e.printStackTrace();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		} finally {
+			try {
+				if (ctx != null) {
+					ctx.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+				if (ps != null) {
+					ps.close();
+				}
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (NamingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		return false;
+	}
+	
+	public void updateUser(String email,String password,String firstName,String lastName) {
+		
+		Context ctx = null;
+		Connection con = null;
+
+		PreparedStatement ps = null;
+
+		ResultSet rs = null;
+		
+		try {
+
+			// Lookup for dataSource
+			ctx = new InitialContext();
+			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/userDB");
+
+			// obtain a connection
+			con = ds.getConnection();
+
+			ps = con.prepareStatement("INSERT INTO USERS VALUES(?,?,?,?)");
+
+			ps.setString(1, email);
+			ps.setString(2, password);
+			ps.setString(3, firstName);
+			ps.setString(4, lastName);
+
+			ps.executeQuery();
+			
+		} catch (NamingException e) {
+
+			e.printStackTrace();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		} finally {
+			try {
+				if (ctx != null) {
+					ctx.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+				if (ps != null) {
+					ps.close();
+				}
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (NamingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
 }
