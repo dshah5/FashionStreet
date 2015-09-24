@@ -64,7 +64,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="belts.html">belts</a></li> |
 				<li><a href="shoes.html">shoes</a></li> |
 				<li><a href="sale.html">sale</a></li>
-				<c:set var="name" value="${requestScope.userBean.firstName}"/>
+				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
     				<c:when test="${not empty name}">
        					<li><a href="profile.jsp">${name}</a></li> |

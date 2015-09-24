@@ -2,10 +2,12 @@ package com.sapient.controller;
 
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.sapient.model.User;
 
@@ -45,12 +47,14 @@ public class LoginServlet extends HttpServlet {
 		boolean status = user.validateLogin(email, password);
 		
 		if(status) {
-			request.setAttribute("userBean", user);
+			HttpSession session = request.getSession(true);
+			//session.setMaxInactiveInterval(10);
+			session.setAttribute("userBean", user);
 			request.getRequestDispatcher("home.jsp").forward(request, response);
 		}
 		else {
-			
-			request.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Enter"
+			HttpSession session = request.getSession(true);
+			session.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Enter"
 					+ "correct username or password"+"</p>");
 			
 			request.getRequestDispatcher("login.jsp").forward(request, response);

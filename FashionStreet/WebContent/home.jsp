@@ -99,11 +99,11 @@
 				<li><a href="belts.html">belts</a></li> |
 				<li><a href="shoes.html">shoes</a></li> |
 				<li><a href="sale.html">sale</a></li>
-				<c:set var="name" value="${requestScope.userBean.firstName}"/>
+				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
     				<c:when test="${not empty name}">
        					<li><a href="profile.jsp">${name}</a></li> |
-    					<li><a href="home.jsp">logout</a></li>
+    					<li><a href="login.jsp">logout</a></li>
     				</c:when>
     				<c:otherwise>
         				<li><a href="login.jsp">login</a></li> |

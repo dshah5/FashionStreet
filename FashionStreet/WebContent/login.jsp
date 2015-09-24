@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>The Aditii Website Template | Contact :: w3layouts</title>
+<title>Fashion Street</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
@@ -23,6 +24,7 @@
 </head>
 <body>
 <!-- start header -->
+<jsp:useBean id="userBean" class="com.sapient.model.User" scope="session"></jsp:useBean>
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
@@ -97,8 +99,12 @@
 <div class="main">
 	 	 <div class="contact">				
 				  <div class="contact-form">
-				  
-				        <%= request.getAttribute("errmessage") %> 
+				  		<c:set var="error" value="${sessionScope.errmessage}"/>
+						<c:choose>
+    						<c:when test="${not empty error}">
+       							${error}
+    						</c:when>
+						</c:choose>
 			 	  	 	<h2>Log In</h2>
 			 	 	    <form method="post" action="login">
 			 	 	        
