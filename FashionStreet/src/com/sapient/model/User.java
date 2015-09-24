@@ -48,8 +48,8 @@ public class User implements Serializable {
 
 		Context ctx = null;
 		Connection con = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
 
 		try {
 			// Lookup for dataSource
@@ -90,14 +90,15 @@ public class User implements Serializable {
 
 		Context ctx = null;
 		Connection con = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
 
 		try {
 
 			// Lookup for dataSource
 			ctx = new InitialContext();
-			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/userDB");
+			DataSource ds = (DataSource) ctx
+					.lookup("java:comp/env/jdbc/userDB");
 
 			// obtain a connection
 			con = ds.getConnection();
@@ -125,19 +126,21 @@ public class User implements Serializable {
 
 		return false;
 	}
-	
-	public void updateUser(String email,String password,String firstName,String lastName) {
-		
+
+	public void updateUser(String email, String password, String firstName,
+			String lastName) {
+
 		Context ctx = null;
 		Connection con = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-		
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
 		try {
 
 			// Lookup for dataSource
 			ctx = new InitialContext();
-			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/userDB");
+			DataSource ds = (DataSource) ctx
+					.lookup("java:comp/env/jdbc/userDB");
 
 			// obtain a connection
 			con = ds.getConnection();
@@ -150,7 +153,7 @@ public class User implements Serializable {
 			ps.setString(4, lastName);
 
 			ps.executeQuery();
-			
+
 		} catch (NamingException e) {
 
 			e.printStackTrace();
@@ -162,11 +165,12 @@ public class User implements Serializable {
 		} finally {
 			this.closer(ctx, con, ps, rs);
 		}
-		
+
 	}
-	
-	public void closer(Context ctx,Connection con,PreparedStatement ps,ResultSet rs){
-		
+
+	public void closer(Context ctx, Connection con, PreparedStatement ps,
+			ResultSet rs) {
+
 		try {
 			if (ctx != null) {
 				ctx.close();
@@ -187,14 +191,14 @@ public class User implements Serializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	public boolean validateName(String fname,String lname) {
-		if(fname.matches("[a-zA-Z]+")&&lname.matches("[a-zA-z]")) {
+
+	public boolean validateName(String fname, String lname) {
+		if (fname.matches("[a-zA-Z]") && lname.matches("[a-zA-z]")) {
 			return true;
-		}
-		else return false;
+		} else
+			return false;
 	}
 
 }
