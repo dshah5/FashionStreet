@@ -58,6 +58,8 @@
 </head>
 <body>
 <!-- start header -->
+<jsp:useBean id="userBean" class="com.sapient.model.User" scope="request"></jsp:useBean>
+
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
@@ -96,7 +98,7 @@
 				<li><a href="index.html">belts</a></li> |
 				<li><a href="shoes.html">shoes</a></li> |
 				<li><a href="sale.html">sale</a></li>
-				<li><a href="login.jsp">login</a></li>
+				<li><a href="login.jsp"><jsp:getProperty property="firstName" name="userBean"/></a></li>
 			</ul>
 		</div>
 		

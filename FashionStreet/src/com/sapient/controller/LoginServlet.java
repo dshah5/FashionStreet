@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
 		
 		if(status) {
 			request.setAttribute("userBean", user);
-			request.getRequestDispatcher("check.jsp").forward(request, response);
+			request.getRequestDispatcher("home.jsp").forward(request, response);
 		}
 		else {
 			
