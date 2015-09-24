@@ -115,9 +115,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic1.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>TOMMY-HILFIGER</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$899<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -125,9 +125,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic2.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>HUGO BOSS</h3>
 					<div class="price">
-						<h4>$299 <span>indulge</span></h4>
+						<h4>$859 <span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -135,9 +135,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic3.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>ALPINE SWISS</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$799<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -148,9 +148,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic4.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>HIDESIGN</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$759<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -158,9 +158,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic5.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>BAGGIT</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$699<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -168,9 +168,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic6.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>LOUIS-PHILIPPE</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$659<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -188,16 +188,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- start grids_of_4 -->	
 		<div class="grids_of_4">
 			<div class="grid1_of_4">
-				<h4><a href="contact.html">Contact Us</a></h4>
+				<h4><a href="contact.jsp">Contact Us</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.html">About F Street</a></h4>
+				<h4><a href="service.jsp">About F Street</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.html">Common Questions</a></h4>
+				<h4><a href="service.jsp">Common Questions</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="contact.html">Store Locator</a></h4>
+				<h4><a href="contact.jsp">Store Locator</a></h4>
 			</div>
 			<div class="clear"></div>
 		</div>

@@ -120,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/shoe_pic1.jpg" alt=""/>
-					<h3>branded shoes</h3>
+					<h3>PUMA</h3>
 					<div class="price">
 						<h4>$499<span>indulge</span></h4>
 					</div>
@@ -130,9 +130,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/shoe_pic2.jpg" alt=""/>
-					<h3>branded shoes</h3>
+					<h3>HUSH PUPPIES</h3>
 					<div class="price">
-						<h4>$499<span>indulge</span></h4>
+						<h4>$399<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -140,7 +140,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/shoe_pic3.jpg" alt=""/>
-					<h3>branded shoes</h3>
+					<h3>LACOSTE</h3>
 					<div class="price">
 						<h4>$499<span>indulge</span></h4>
 					</div>
@@ -153,9 +153,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/shoe_pic4.jpg" alt=""/>
-					<h3>branded shoes</h3>
+					<h3>HUDSON</h3>
 					<div class="price">
-						<h4>$499<span>indulge</span></h4>
+						<h4>$599<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -163,9 +163,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/shoe_pic5.jpg" alt=""/>
-					<h3>branded shoes</h3>
+					<h3>ADDIDAS</h3>
 					<div class="price">
-						<h4>$499<span>indulge</span></h4>
+						<h4>$699<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -173,9 +173,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/shoe_pic6.jpg" alt=""/>
-					<h3>branded shoes</h3>
+					<h3>PAUL SMITH</h3>
 					<div class="price">
-						<h4>$499<span>indulge</span></h4>
+						<h4>$799<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>

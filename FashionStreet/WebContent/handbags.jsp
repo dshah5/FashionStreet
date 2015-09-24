@@ -120,9 +120,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic1.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>HUSHPUPPIES</h3>
 					<div class="price">
-						<h4>$289<span>indulge</span></h4>
+						<h4>$359<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -130,7 +130,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic2.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>HIDESIGN</h3>
 					<div class="price">
 						<h4>$499 <span>indulge</span></h4>
 					</div>
@@ -140,9 +140,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic3.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>ADDIDAS</h3>
 					<div class="price">
-						<h4>$799<span>indulge</span></h4>
+						<h4>$299<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -153,9 +153,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic4.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>FOSSIL</h3>
 					<div class="price">
-						<h4>$296<span>indulge</span></h4>
+						<h4>$599<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -163,7 +163,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic5.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>PUMA</h3>
 					<div class="price">
 						<h4>$229<span>indulge</span></h4>
 					</div>
@@ -173,9 +173,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic6.jpg" alt=""/>
-					<h3>branded handbags</h3>
+					<h3>HAIKU</h3>
 					<div class="price">
-						<h4>$595<span>indulge</span></h4>
+						<h4>$699<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
