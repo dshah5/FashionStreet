@@ -121,7 +121,7 @@
 							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
 							<li class="nav-item"><a href="accessories.html">jewelry</a></li>
 							<li class="nav-item"><a href="wallets.html">wallets</a></li>
-							<li class="nav-item"><a href="accessories.html">belts</a></li>
+							<li class="nav-item"><a href="belts.html">belts</a></li>
 							<li class="nav-item"><a href="shoes.html">shoes</a></li>
 							<li class="nav-item"><a href="sale.html">sale</a></li>
 							<li class="nav-item"><a href="login.jsp">login</a></li>
