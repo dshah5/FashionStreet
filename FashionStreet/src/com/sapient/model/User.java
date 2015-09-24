@@ -195,7 +195,7 @@ public class User implements Serializable {
 	}
 
 	public boolean validateName(String fname, String lname) {
-		if (fname.matches("[a-zA-Z]") && lname.matches("[a-zA-z]")) {
+		if (fname.matches("[a-zA-Z]+") && lname.matches("[a-zA-Z]+")) {
 			return true;
 		} else
 			return false;
