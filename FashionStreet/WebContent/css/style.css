@@ -528,7 +528,7 @@ body {
 .grid1_of_4:first-child{
 	margin-left: 0;
 }
-.grid1_of_4 h4{
+.grid1_of_4 h4 a{
 	font-size: 1.8em;
 	color: #ffffff;
 }
@@ -1316,7 +1316,7 @@ p.para{
 		font-size: 1.4em;
 	}
 	.product-image {
-		width: 350px;
+		width: 300px;
 	}
 }
 @media only screen and (max-width: 1024px) {

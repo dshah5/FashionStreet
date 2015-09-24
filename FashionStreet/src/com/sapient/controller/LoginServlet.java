@@ -38,8 +38,6 @@ public class LoginServlet extends HttpServlet {
 		String email= request.getParameter("email").toLowerCase();
 		String password= request.getParameter("pword");
 		
-		//PrintWriter out = response.getWriter();
-		
 		User user=new User();
 		
 		user.setEmail(email);
