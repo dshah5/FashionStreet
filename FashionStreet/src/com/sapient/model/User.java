@@ -10,9 +10,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+public class User implements Serializable {
 
-public class User implements Serializable{
-	
 	/**
 	 * 
 	 */
@@ -20,7 +19,7 @@ public class User implements Serializable{
 	private String email;
 	private String firstName;
 	private String lastName;
-	
+
 	public String getEmail() {
 		return email;
 	}
@@ -28,7 +27,7 @@ public class User implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -45,62 +44,55 @@ public class User implements Serializable{
 		this.lastName = lastName;
 	}
 
-	
+	public boolean validateLogin(String email, String password) {
 
-	
-	
-	public boolean validateLogin(String email,String password) {
-		
-		Context ctx=null;
-		Connection con=null;
-		
-		PreparedStatement ps=null;
-		
-		ResultSet rs =null;
-		
+		Context ctx = null;
+		Connection con = null;
+
+		PreparedStatement ps = null;
+
+		ResultSet rs = null;
+
 		try {
-		//Lookup for dataSource
-		ctx = new InitialContext();
-		DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/userDB");
-		
-		// obtain a connection
-		con = ds.getConnection();
-		
-		ps = con.prepareStatement("SELECT EMAIL,PASSWORD,FIRST_NAME,LAST_NAME FROM USERS WHERE EMAIL=? AND PASSWORD=?");
-		
-		
+			// Lookup for dataSource
+			ctx = new InitialContext();
+			DataSource ds = (DataSource) ctx
+					.lookup("java:comp/env/jdbc/userDB");
 
-		ps.setString(1, email);
-		ps.setString(2, password);
-		
-		rs=ps.executeQuery();
-		
-		if(rs.next()) {
-			firstName = rs.getString(3);
-			lastName = rs.getString(4);
-			
-			return true;
-		}
-		else return false;
+			// obtain a connection
+			con = ds.getConnection();
+
+			ps = con.prepareStatement("SELECT EMAIL,PASSWORD,FIRST_NAME,LAST_NAME FROM USERS WHERE EMAIL=? AND PASSWORD=?");
+
+			ps.setString(1, email);
+			ps.setString(2, password);
+
+			rs = ps.executeQuery();
+
+			if (rs.next()) {
+
+				firstName = rs.getString(3);
+				lastName = rs.getString(4);
+				return true;
+			} else
+				return false;
 		} catch (NamingException e) {
 			// TODO: handle exception
 			e.printStackTrace();
-		}
-		catch (SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		finally {
+		} finally {
 			try {
-				if(ctx!=null){
+				if (ctx != null) {
 					ctx.close();
 				}
-				if(con!=null){
+				if (con != null) {
 					con.close();
 				}
-				if(ps!=null){
+				if (ps != null) {
 					ps.close();
 				}
-				if(rs!=null){
+				if (rs != null) {
 					rs.close();
 				}
 			} catch (NamingException e) {
@@ -111,10 +103,8 @@ public class User implements Serializable{
 				e.printStackTrace();
 			}
 		}
-		
+
 		return false;
 	}
-		
-	}
-		
-		
+
+}
