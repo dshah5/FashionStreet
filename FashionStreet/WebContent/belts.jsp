@@ -118,7 +118,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- start grids_of_3 -->
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/belt1.jpg" alt=""/>
 					<h3>ARROW</h3>
 					<div class="price">
@@ -128,7 +128,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/belt2.jpg" alt=""/>
 					<h3>LEE</h3>
 					<div class="price">
@@ -138,7 +138,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/belt3.jpg" alt=""/>
 					<h3>JOHN-PLAYERS</h3>
 					<div class="price">
@@ -151,7 +151,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/winsome_b.jpg" alt=""/>
 					<h3>WRANGLER</h3>
 					<div class="price">
@@ -161,7 +161,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/winsome_br.jpg" alt=""/>
 					<h3>TURTLE</h3>
 					<div class="price">
@@ -171,7 +171,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/winsome2.jpg" alt=""/>
 					<h3>PUMA</h3>
 					<div class="price">

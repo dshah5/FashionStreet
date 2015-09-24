@@ -118,7 +118,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- start grids_of_3 -->
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/shoe_pic1.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">
@@ -128,7 +128,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/shoe_pic2.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">
@@ -138,7 +138,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/shoe_pic3.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">
@@ -151,7 +151,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/shoe_pic4.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">
@@ -161,7 +161,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/shoe_pic5.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">
@@ -171,7 +171,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/shoe_pic6.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">

@@ -114,7 +114,7 @@
 		<!-- start grids_of_3 -->
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/NI006.jpg" alt=""/>
 					<h3>branded jewellery</h3>
 					<div class="price">
@@ -124,7 +124,7 @@
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/NI005.jpg" alt=""/>
 					<h3>branded jewellery</h3>
 					<div class="price">
@@ -134,7 +134,7 @@
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/NI001.jpg" alt=""/>
 					<h3>branded jewellry</h3>
 					<div class="price">
@@ -147,7 +147,7 @@
 		</div>
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/NI002.jpg" alt=""/>
 					<h3>branded jewellry</h3>
 					<div class="price">
@@ -157,7 +157,7 @@
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/NI003.jpg" alt=""/>
 					<h3>branded jewellry</h3>
 					<div class="price">
@@ -167,7 +167,7 @@
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.html">
+				<a href="details.jsp">
 					<img src="images/NI004.jpg" alt=""/>
 					<h3>branded jewellry</h3>
 					<div class="price">
