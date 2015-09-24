@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
-<title>Free Aditii Website Template | Home :: w3layouts</title>
+<title>Fashion Street</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
@@ -98,7 +99,17 @@
 				<li><a href="index.html">belts</a></li> |
 				<li><a href="shoes.html">shoes</a></li> |
 				<li><a href="sale.html">sale</a></li>
-				<li><a href="login.jsp"><jsp:getProperty property="firstName" name="userBean"/></a></li>
+				<c:set var="name" value="${requestScope.userBean.firstName}"/>
+				<c:choose>
+    				<c:when test="${not empty name}">
+       					<li><a href="profile.jsp">${name}</a></li> |
+    					<li><a href="home.jsp">logout</a></li>
+    				</c:when>
+    				<c:otherwise>
+        				<li><a href="login.jsp">login</a></li> |
+						<li><a href="register.html">register</a></li>
+    				</c:otherwise>
+				</c:choose>
 			</ul>
 		</div>
 		
@@ -131,7 +142,7 @@
 <!-- start slider -->
 			<div id="da-slider" class="da-slider">
 				<div class="da-slide">
-					<h2>welcome to aditii</h2>
+					<h2>welcome to f street</h2>
 					<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
 					<a href="details.html" class="da-link">shop now</a>
 					<div class="da-img"><img src="images/slider1.png" alt="image01" /></div>
