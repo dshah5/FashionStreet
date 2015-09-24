@@ -1,8 +1,7 @@
 package com.sapient.controller;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,20 +35,20 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String username= request.getParameter("uname");
+		String email= request.getParameter("email");
 		String password= request.getParameter("pword");
 		
-		PrintWriter out = response.getWriter();
+		//PrintWriter out = response.getWriter();
 		
 		User user=new User();
 		
-		user.setUsername(username);
+		user.setEmail(email);
 		
-		boolean status = user.validateLogin(username, password);
+		boolean status = user.validateLogin(email, password);
 		
 		if(status) {
-			request.getRequestDispatcher("index.html").forward(request, response);
-			
+			request.setAttribute("userBean", user);
+			request.getRequestDispatcher("check.jsp").forward(request, response);
 		}
 		else {
 			

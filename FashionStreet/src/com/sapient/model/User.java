@@ -1,46 +1,120 @@
 package com.sapient.model;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.io.Serializable;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
-import com.sun.javafx.webkit.KeyCodeMap.Entry;
 
-public class User {
+public class User implements Serializable{
 	
-	private String username;
-
-	public String getUsername() {
-		return username;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String email;
+	private String firstName;
+	private String lastName;
+	
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
-	public Map<String,String> getUsers() {
-		Map<String,String> map= new HashMap<String,String>();
-		map.put("gunjan", "123");
-		map.put("divya", "123");
-		map.put("danielle", "123");
-		map.put("nimisha","123");
-		return map;
+	public String getFirstName() {
+		return firstName;
 	}
-	
-	public boolean validateLogin(String username,String password) {
-		
-		
-		
-	  if(this.getUsers().containsKey(username)&&this.getUsers().containsValue(password)) {
-		  
-		  return true;
-	  }
-		
-	  else return false;
-		
-		
-		
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
 	
 
-}
+	
+	
+	public boolean validateLogin(String email,String password) {
+		
+		Context ctx=null;
+		Connection con=null;
+		
+		PreparedStatement ps=null;
+		
+		ResultSet rs =null;
+		
+		try {
+		//Lookup for dataSource
+		ctx = new InitialContext();
+		DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/userDB");
+		
+		// obtain a connection
+		con = ds.getConnection();
+		
+		ps = con.prepareStatement("SELECT EMAIL,PASSWORD,FIRST_NAME,LAST_NAME FROM USERS WHERE EMAIL=? AND PASSWORD=?");
+		
+		
+
+		ps.setString(1, email);
+		ps.setString(2, password);
+		
+		rs=ps.executeQuery();
+		
+		if(rs.next()) {
+			firstName = rs.getString(3);
+			lastName = rs.getString(4);
+			
+			return true;
+		}
+		else return false;
+		} catch (NamingException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if(ctx!=null){
+					ctx.close();
+				}
+				if(con!=null){
+					con.close();
+				}
+				if(ps!=null){
+					ps.close();
+				}
+				if(rs!=null){
+					rs.close();
+				}
+			} catch (NamingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		return false;
+	}
+		
+	}
+		
+		

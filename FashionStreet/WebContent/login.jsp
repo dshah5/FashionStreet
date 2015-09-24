@@ -103,8 +103,8 @@
 			 	 	    <form method="post" action="login">
 			 	 	        
 					    	<div>
-						    	<span><label>Username or Email-Id</label></span>
-						    	<span><input name="uname" type="text" class="textbox"></span>
+						    	<span><label>Email-Id</label></span>
+						    	<span><input name="email" type="text" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>Password</label></span>
