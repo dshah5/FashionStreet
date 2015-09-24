@@ -84,7 +84,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     					<li><a href="logout">logout</a></li>
     					
     				</c:when>
-    				<c:otherwise>
+    				<c:otherwise>  
         				<li><a href="login.jsp">login</a></li> |
 						<li><a href="register.jsp">register</a></li>
     				</c:otherwise>
