@@ -65,14 +65,14 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/> </a>
+			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
 			<li><a class="active-icon c1" href="#"><i>$300</i></a>
 				<ul class="sub-icon1 list">
 					<li><h3>shopping cart empty</h3><a href=""></a></li>
-					<li><p>if items in your wishlit are missing, <a href="contact.html">contact us</a> to view them</p></li>
+					<li><p>if items in your wish list are missing, <a href="contact.jsp">contact us</a> to view them</p></li>
 				</ul>
 			</li>
 		</ul>
@@ -93,21 +93,24 @@
 		<div class="h_menu">
 			<ul>
 				<li><a href="home.jsp">Home</a></li> |
-				<li><a href="handbags.html">handbags</a></li> |
-				<li><a href="jewelry.html">jewelry</a></li> |
+				<li><a href="handbags.jsp">handbags</a></li> |
+				<li><a href="jewelry.jsp">jewelry</a></li> |
 				<li><a href="wallets.jsp">wallets</a></li> |
-				<li><a href="belts.html">belts</a></li> |
-				<li><a href="shoes.html">shoes</a></li> |
-				<li><a href="sale.html">sale</a></li>
+				<li><a href="belts.jsp">belts</a></li> |
+				<li><a href="shoes.jsp">shoes</a></li> |
+				<li><a href="sale.jsp">sale</a></li>
 				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
     				<c:when test="${not empty name}">
        					<li><a href="profile.jsp">${name}</a></li> |
-    					<li><a href="login.jsp">logout</a></li>
+    					<form action="logout" method="post">
+    						<input type="submit" value="Logout" />
+						</form>
+    					
     				</c:when>
     				<c:otherwise>
         				<li><a href="login.jsp">login</a></li> |
-						<li><a href="register.html">register</a></li>
+						<li><a href="register.jsp">register</a></li>
     				</c:otherwise>
 				</c:choose>
 			</ul>
@@ -117,13 +120,13 @@
 	          <nav class="nav">	        	
 	    	    <a href="#" id="w3-menu-trigger"> </a>
 	                  <ul class="nav-list" style="">
-	            	        <li class="nav-item"><a class="active" href="index.html">Home</a></li>
-							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
-							<li class="nav-item"><a href="jewelry.html">jewelry</a></li>
+	            	        <li class="nav-item"><a class="active" href="index.jsp">Home</a></li>
+							<li class="nav-item"><a href="handbags.jsp">Handbags</a></li>
+							<li class="nav-item"><a href="jewelry.jsp">jewelry</a></li>
 							<li class="nav-item"><a href="wallets.jsp">wallets</a></li>
-							<li class="nav-item"><a href="belts.html">belts</a></li>
-							<li class="nav-item"><a href="shoes.html">shoes</a></li>
-							<li class="nav-item"><a href="sale.html">sale</a></li>
+							<li class="nav-item"><a href="belts.jsp">belts</a></li>
+							<li class="nav-item"><a href="shoes.jsp">shoes</a></li>
+							<li class="nav-item"><a href="sale.jsp">sale</a></li>
 							<li class="nav-item"><a href="login.jsp">login</a></li>
 	                 </ul>
 	           </nav>

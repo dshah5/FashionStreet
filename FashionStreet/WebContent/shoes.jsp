@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Fashion Street</title>
@@ -109,35 +115,77 @@
 <!-- start main -->
 <div class="main_bg">
 <div class="wrap">	
-<div class="main">
-	 	 <div class="contact">				
-				  <div class="contact-form">
-				  		<c:set var="error" value="${sessionScope.errmessage}"/>
-						<c:choose>
-    						<c:when test="${not empty error}">
-       							${error}
-    						</c:when>
-						</c:choose>
-			 	  	 	<h2>Log In</h2>
-			 	 	    <form method="post" action="login">
-			 	 	        
-					    	<div>
-						    	<span><label>Email-Id</label></span>
-						    	<span><input name="email" type="text" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>Password</label></span>
-						    	<span><input name="pword" type="password" class="textbox"></span>
-						    </div>
-						   
-						   <div>
-						   		<span><input type="submit" class="" value="Submit"></span>
-						  </div>
-					    </form>
-				    </div>
-  				<div class="clear"></div>		
-			  </div>
+	<div class="main">
+		<h2 class="style top">featured shoes</h2>
+		<!-- start grids_of_3 -->
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/shoe_pic1.jpg" alt=""/>
+					<h3>branded shoes</h3>
+					<div class="price">
+						<h4>$499<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/shoe_pic2.jpg" alt=""/>
+					<h3>branded shoes</h3>
+					<div class="price">
+						<h4>$499<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/shoe_pic3.jpg" alt=""/>
+					<h3>branded shoes</h3>
+					<div class="price">
+						<h4>$499<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="clear"></div>
 		</div>
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/shoe_pic4.jpg" alt=""/>
+					<h3>branded shoes</h3>
+					<div class="price">
+						<h4>$499<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/shoe_pic5.jpg" alt=""/>
+					<h3>branded shoes</h3>
+					<div class="price">
+						<h4>$499<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="details.html">
+					<img src="images/shoe_pic6.jpg" alt=""/>
+					<h3>branded shoes</h3>
+					<div class="price">
+						<h4>$499<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>	
+		<!-- end grids_of_3 -->
+	</div>
 </div>
 </div>		
 <!-- start footer -->

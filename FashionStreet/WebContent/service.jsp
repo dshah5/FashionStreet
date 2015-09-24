@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Fashion Street</title>
@@ -21,6 +27,7 @@
 			});
 		});
 	</script>
+
 </head>
 <body>
 <!-- start header -->
@@ -109,35 +116,74 @@
 <!-- start main -->
 <div class="main_bg">
 <div class="wrap">	
-<div class="main">
-	 	 <div class="contact">				
-				  <div class="contact-form">
-				  		<c:set var="error" value="${sessionScope.errmessage}"/>
-						<c:choose>
-    						<c:when test="${not empty error}">
-       							${error}
-    						</c:when>
-						</c:choose>
-			 	  	 	<h2>Log In</h2>
-			 	 	    <form method="post" action="login">
-			 	 	        
-					    	<div>
-						    	<span><label>Email-Id</label></span>
-						    	<span><input name="email" type="text" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>Password</label></span>
-						    	<span><input name="pword" type="password" class="textbox"></span>
-						    </div>
-						   
-						   <div>
-						   		<span><input type="submit" class="" value="Submit"></span>
-						  </div>
-					    </form>
-				    </div>
-  				<div class="clear"></div>		
-			  </div>
+	<div class="main">
+	<!-- start service -->
+	  <div class="service">
+		<div class="ser-main">
+			<h4>Our Services</h4>
+			<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+			<div class="ser-grid">
+				<div class="ser-grid-list">
+					<a href="details.html"><img src="images/icon1.png" alt=""></a>
+					<h5><a href="details.html">24/7 customer support</a></h5>
+					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
+				</div>
+				<div class="ser-grid-list">
+					<a href="details.html"><img src="images/icon2.png" alt=""></a>
+					<h5><a href="details.html">hygienic branded</a></h5>
+					<p class="para"> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+				</div>
+				<div class="ser-grid-list">
+					<a href="details.html"><img src="images/icon3.png" alt=""></a>
+					<h5><a href="details.html">safely dispatch</a></h5>
+					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="ser-grid">
+				<div class="ser-grid-list">
+					<a href="details.html"><img src="images/icon4.png" alt=""></a>
+					<h5><a href="details.html">100% look book</a></h5>
+					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
+				</div>
+				<div class="ser-grid-list">
+					<a href="details.html"><img src="images/icon5.png" alt=""></a>
+					<h5><a href="details.html">authentic products</a></h5>
+					<p class="para"> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+				</div>
+				<div class="ser-grid-list">
+					<a href="details.html"><img src="images/icon6.png" alt=""></a>
+					<h5><a href="details.html">100% guarantee</a></h5>
+					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
+				</div>
+				<div class="clear"></div>
+			</div>
 		</div>
+		<div class="left_sidebar">
+					<div class="sellers">
+						<h4>Best Sellers</h4>
+						<div class="single-nav">
+			                <ul>
+			                   <li><a href="#">Always free from repetition</a></li>
+			                    <li><a href="#">Always free from repetition</a></li>
+			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
+			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
+			                    <li><a href="#">Always free from repetition</a></li>
+			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
+			                    <li><a href="#">Always free from repetition</a></li>
+			                    <li><a href="#">Always free from repetition</a></li>
+			                    <li><a href="#">Always free from repetition</a></li>
+			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
+			                    <li><a href="#">Always free from repetition</a></li>
+			                    <li><a href="#">Always free from repetition</a></li>
+			                    <li><a href="#">Always free from repetition</a></li>			                    
+			                </ul>
+			              </div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+	</div>
 </div>
 </div>		
 <!-- start footer -->

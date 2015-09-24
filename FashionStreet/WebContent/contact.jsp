@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -7,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>The Aditii Website Template | Handbags :: w3layouts</title>
+<title>Fashion Street</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
@@ -27,18 +30,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <!-- start header -->
+<jsp:useBean id="userBean" class="com.sapient.model.User" scope="session"></jsp:useBean>
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/> </a>
+			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
 			<li><a class="active-icon c1" href="#"><i>$300</i></a>
 				<ul class="sub-icon1 list">
 					<li><h3>shopping cart empty</h3><a href=""></a></li>
-					<li><p>if items in your wishlit are missing, <a href="contact.html">contact us</a> to view them</p></li>
+					<li><p>if items in your wish list are missing, <a href="contact.jsp">contact us</a> to view them</p></li>
 				</ul>
 			</li>
 		</ul>
@@ -58,14 +62,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="index.html">Home</a></li> |
-				<li><a href="handbags.html">handbags</a></li> |
-				<li><a href="accessories.html">jewelry</a></li> |
-				<li><a href="wallets.html">wallets</a></li> |
-				<li><a href="belts.html">belts</a></li> |
-				<li><a href="shoes.html">shoes</a></li> |
-				<li><a href="sale.html">sale</a></li>
-				<li><a href="login.jsp">login</a></li>
+				<li><a href="home.jsp">Home</a></li> |
+				<li><a href="handbags.jsp">handbags</a></li> |
+				<li><a href="jewelry.jsp">jewelry</a></li> |
+				<li><a href="wallets.jsp">wallets</a></li> |
+				<li><a href="belts.jsp">belts</a></li> |
+				<li><a href="shoes.jsp">shoes</a></li> |
+				<li><a href="sale.jsp">sale</a></li>
+				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
+				<c:choose>
+    				<c:when test="${not empty name}">
+       					<li><a href="profile.jsp">${name}</a></li> |
+    					<form action="logout" method="post">
+    						<input type="submit" value="Logout" />
+						</form>
+    					
+    				</c:when>
+    				<c:otherwise>
+        				<li><a href="login.jsp">login</a></li> |
+						<li><a href="register.jsp">register</a></li>
+    				</c:otherwise>
+				</c:choose>
 			</ul>
 		</div>
 		
@@ -73,13 +90,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	          <nav class="nav">	        	
 	    	    <a href="#" id="w3-menu-trigger"> </a>
 	                  <ul class="nav-list" style="">
-	            	        <li class="nav-item"><a class="active" href="index.html">Home</a></li>
-							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
-							<li class="nav-item"><a href="accessories.html">jewelry</a></li>
-							<li class="nav-item"><a href="wallets.html">wallets</a></li>
-							<li class="nav-item"><a href="accessories.html">belts</a></li>
-							<li class="nav-item"><a href="shoes.html">shoes</a></li>
-							<li class="nav-item"><a href="sale.html">sale</a></li>
+	            	        <li class="nav-item"><a class="active" href="index.jsp">Home</a></li>
+							<li class="nav-item"><a href="handbags.jsp">Handbags</a></li>
+							<li class="nav-item"><a href="jewelry.jsp">jewelry</a></li>
+							<li class="nav-item"><a href="wallets.jsp">wallets</a></li>
+							<li class="nav-item"><a href="belts.jsp">belts</a></li>
+							<li class="nav-item"><a href="shoes.jsp">shoes</a></li>
+							<li class="nav-item"><a href="sale.jsp">sale</a></li>
 							<li class="nav-item"><a href="login.jsp">login</a></li>
 	                 </ul>
 	           </nav>
@@ -98,79 +115,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- start main -->
 <div class="main_bg">
 <div class="wrap">	
-	<div class="main">
-		<h2 class="style top">featured belts</h2>
-		<!-- start grids_of_3 -->
-		<div class="grids_of_3">
-			<div class="grid1_of_3">
-				<a href="details.html">
-					<img src="images/belt1.jpg" alt=""/>
-					<h3>ARROW</h3>
-					<div class="price">
-						<h4>$100<span>indulge</span></h4>
-					</div>
-					<span class="b_btm"></span>
-				</a>
-			</div>
-			<div class="grid1_of_3">
-				<a href="details.html">
-					<img src="images/belt2.jpg" alt=""/>
-					<h3>LEE</h3>
-					<div class="price">
-						<h4>$150 <span>indulge</span></h4>
-					</div>
-					<span class="b_btm"></span>
-				</a>
-			</div>
-			<div class="grid1_of_3">
-				<a href="details.html">
-					<img src="images/belt3.jpg" alt=""/>
-					<h3>JOHN-PLAYERS</h3>
-					<div class="price">
-						<h4>$200<span>indulge</span></h4>
-					</div>
-					<span class="b_btm"></span>
-				</a>
-			</div>
-			<div class="clear"></div>
+<div class="main">
+	 	 <div class="contact">				
+					<div class="contact_info">
+						<h2>get in touch</h2>
+			    	 		<div class="map">
+					   			<iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#777777;text-align:left;font-size:13px;font-family: 'Source Sans Pro', sans-serif;">View Larger Map</a></small>
+					   		</div>
+      				</div>
+				  <div class="contact-form">
+			 	  	 	<h2>Contact Us</h2>
+			 	 	    <form method="post" action="contact-post.html">
+					    	<div>
+						    	<span><label>Name</label></span>
+						    	<span><input name="userName" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>E-mail</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						     	<span><label>Mobile</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>Subject</label></span>
+						    	<span><textarea name="userMsg"> </textarea></span>
+						    </div>
+						   <div>
+						   		<span><input type="submit" class="" value="Submit us"></span>
+						  </div>
+					    </form>
+				    </div>
+  				<div class="clear"></div>		
+			  </div>
 		</div>
-		<div class="grids_of_3">
-			<div class="grid1_of_3">
-				<a href="details.html">
-					<img src="images/winsome_b.jpg" alt=""/>
-					<h3>WRANGLER</h3>
-					<div class="price">
-						<h4>$250<span>indulge</span></h4>
-					</div>
-					<span class="b_btm"></span>
-				</a>
-			</div>
-			<div class="grid1_of_3">
-				<a href="details.html">
-					<img src="images/winsome_br.jpg" alt=""/>
-					<h3>TURTLE</h3>
-					<div class="price">
-						<h4>$299<span>indulge</span></h4>
-					</div>
-					<span class="b_btm"></span>
-				</a>
-			</div>
-			<div class="grid1_of_3">
-				<a href="details.html">
-					<img src="images/winsome2.jpg" alt=""/>
-					<h3>PUMA</h3>
-					<div class="price">
-						<h4>$350<span>indulge</span></h4>
-					</div>
-					<span class="b_btm"></span>
-				</a>
-			</div>
-			<div class="clear"></div>
-		</div>	
-		<!-- end grids_of_3 -->
-	</div>
 </div>
-</div>	
+</div>		
 <!-- start footer -->
 <div class="footer_bg">
 <div class="wrap">	
