@@ -1,3 +1,4 @@
+ <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -7,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>The Aditii Website Template | Walltes :: w3layouts</title>
+<title>Fashion Street</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
@@ -27,11 +28,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <!-- start header -->
+<jsp:useBean id="userBean" class="com.sapient.model.User" scope="request"></jsp:useBean>
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/> </a>
+			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
@@ -43,12 +45,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</li>
 		</ul>
 		</div>
-		<div class="h_search">
-    		<form>
-    			<input type="text" value="">
-    			<input type="submit" value="">
-    		</form>
-		</div>
+		
 		<div class="clear"></div>
 	</div>
 </div>
@@ -58,14 +55,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="index.html">Home</a></li> |
+				<li><a href="home.jsp">Home</a></li> |
 				<li><a href="handbags.html">handbags</a></li> |
-				<li><a href="accessories.html">jewelry</a></li> |
+				<li><a href="jewelry.html">jewelry</a></li> |
 				<li><a href="wallets.html">wallets</a></li> |
-				<li><a href="index.html">belts</a></li> |
+				<li><a href="belts.html">belts</a></li> |
 				<li><a href="shoes.html">shoes</a></li> |
 				<li><a href="sale.html">sale</a></li>
-				<li><a href="login.jsp">login</a></li>
+				<c:set var="name" value="${requestScope.userBean.firstName}"/>
+				<c:choose>
+    				<c:when test="${not empty name}">
+       					<li><a href="profile.jsp">${name}</a></li> |
+    					<li><a href="home.jsp">logout</a></li>
+    				</c:when>
+    				<c:otherwise>
+        				<li><a href="login.jsp">login</a></li> |
+						<li><a href="register.html">register</a></li>
+    				</c:otherwise>
+				</c:choose>
 			</ul>
 		</div>
 		

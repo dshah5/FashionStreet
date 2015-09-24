@@ -92,10 +92,10 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="index.html">Home</a></li> |
+				<li><a href="home.jsp">Home</a></li> |
 				<li><a href="handbags.html">handbags</a></li> |
 				<li><a href="jewelry.html">jewelry</a></li> |
-				<li><a href="wallets.html">wallets</a></li> |
+				<li><a href="wallets.jsp">wallets</a></li> |
 				<li><a href="belt.html">belts</a></li> |
 				<li><a href="shoes.html">shoes</a></li> |
 				<li><a href="sale.html">sale</a></li>
@@ -119,8 +119,8 @@
 	                  <ul class="nav-list" style="">
 	            	        <li class="nav-item"><a class="active" href="index.html">Home</a></li>
 							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
-							<li class="nav-item"><a href="accessories.html">jewelry</a></li>
-							<li class="nav-item"><a href="wallets.html">wallets</a></li>
+							<li class="nav-item"><a href="jewelry.html">jewelry</a></li>
+							<li class="nav-item"><a href="wallets.jsp">wallets</a></li>
 							<li class="nav-item"><a href="belts.html">belts</a></li>
 							<li class="nav-item"><a href="shoes.html">shoes</a></li>
 							<li class="nav-item"><a href="sale.html">sale</a></li>
