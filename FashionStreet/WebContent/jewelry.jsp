@@ -116,7 +116,7 @@
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/NI006.jpg" alt=""/>
-					<h3>branded jewellery</h3>
+					<h3>addons earrings</h3>
 					<div class="price">
 						<h4>$295<span>indulge</span></h4>
 					</div>
@@ -126,7 +126,7 @@
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/NI005.jpg" alt=""/>
-					<h3>branded jewellery</h3>
+					<h3>voylla pendant</h3>
 					<div class="price">
 						<h4>$399 <span>indulge</span></h4>
 					</div>
@@ -136,7 +136,7 @@
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/NI001.jpg" alt=""/>
-					<h3>branded jewellry</h3>
+					<h3>peora bracelet</h3>
 					<div class="price">
 						<h4>$279<span>indulge</span></h4>
 					</div>
@@ -149,7 +149,7 @@
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/NI002.jpg" alt=""/>
-					<h3>branded jewellry</h3>
+					<h3>voylla ring</h3>
 					<div class="price">
 						<h4>$599<span>indulge</span></h4>
 					</div>
@@ -159,7 +159,7 @@
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/NI003.jpg" alt=""/>
-					<h3>branded jewellry</h3>
+					<h3>addons earrings</h3>
 					<div class="price">
 						<h4>$759<span>indulge</span></h4>
 					</div>
@@ -169,7 +169,7 @@
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/NI004.jpg" alt=""/>
-					<h3>branded jewellry</h3>
+					<h3>addons earrings</h3>
 					<div class="price">
 						<h4>$749<span>indulge</span></h4>
 					</div>
