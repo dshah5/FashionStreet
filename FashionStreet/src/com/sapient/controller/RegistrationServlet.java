@@ -1,7 +1,6 @@
 package com.sapient.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,13 +39,16 @@ public class RegistrationServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	//	emails.add("dlredmond@gatech.edu");
-		PrintWriter out = response.getWriter();
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
 		User user=new User();
+		request.setAttribute("userBean", user);
+		
+		
+		if(user.validateName(fname, lname)) {
 		
 		boolean status = user.isEmailRegistered(email);
 		
@@ -68,6 +70,14 @@ public class RegistrationServlet extends HttpServlet {
 					+ "registration. please login"+"</p>");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			
+		}
+		}
+		else
+		{
+			request.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Firstname"
+					+ " and Lastname can't contain digits"+"</p>");
+			
+			request.getRequestDispatcher("register.jsp").forward(request, response);
 		}
 	}
 
