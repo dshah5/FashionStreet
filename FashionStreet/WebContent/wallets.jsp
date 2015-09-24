@@ -30,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <!-- start header -->
-<jsp:useBean id="userBean" class="com.sapient.model.User" scope="request"></jsp:useBean>
+<jsp:useBean id="userBean" class="com.sapient.model.User" scope="session"></jsp:useBean>
 <div class="header_bg">
 <div class="wrap">
 	<div class="header">
