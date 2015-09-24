@@ -120,7 +120,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic1.jpg" alt=""/>
-					<h3>HUSHPUPPIES</h3>
+					<h3>HUSHPUPPIES(12345)</h3>
+				
 					<div class="price">
 						<h4>$359<span>indulge</span></h4>
 					</div>
@@ -130,7 +131,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic2.jpg" alt=""/>
-					<h3>HIDESIGN</h3>
+					<h3>HIDESIGN(11456)</h3>
 					<div class="price">
 						<h4>$499 <span>indulge</span></h4>
 					</div>
@@ -140,7 +141,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic3.jpg" alt=""/>
-					<h3>ADDIDAS</h3>
+					<h3>ADDIDAS(65740)</h3>
 					<div class="price">
 						<h4>$299<span>indulge</span></h4>
 					</div>
@@ -153,7 +154,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic4.jpg" alt=""/>
-					<h3>FOSSIL</h3>
+					<h3>FOSSIL(76096)</h3>
 					<div class="price">
 						<h4>$599<span>indulge</span></h4>
 					</div>
@@ -163,7 +164,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic5.jpg" alt=""/>
-					<h3>PUMA</h3>
+					<h3>PUMA(60123)</h3>
 					<div class="price">
 						<h4>$229<span>indulge</span></h4>
 					</div>
@@ -173,7 +174,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="images/w_pic6.jpg" alt=""/>
-					<h3>HAIKU</h3>
+					<h3>HAIKU(88006)</h3>
 					<div class="price">
 						<h4>$699<span>indulge</span></h4>
 					</div>
