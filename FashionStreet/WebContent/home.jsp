@@ -94,9 +94,9 @@
 			<ul>
 				<li><a href="index.html">Home</a></li> |
 				<li><a href="handbags.html">handbags</a></li> |
-				<li><a href="accessories.html">jewelry</a></li> |
+				<li><a href="jewelry.html">jewelry</a></li> |
 				<li><a href="wallets.html">wallets</a></li> |
-				<li><a href="index.html">belts</a></li> |
+				<li><a href="belt.html">belts</a></li> |
 				<li><a href="shoes.html">shoes</a></li> |
 				<li><a href="sale.html">sale</a></li>
 				<c:set var="name" value="${requestScope.userBean.firstName}"/>
