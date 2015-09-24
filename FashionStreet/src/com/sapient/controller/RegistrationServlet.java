@@ -69,18 +69,6 @@ public class RegistrationServlet extends HttpServlet {
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			
 		}
-		
-		
-		/*
-		for (String existing:emails){
-			if (email.equals(existing)){
-				   out.println("<script type=\"text/javascript\">");
-				   out.println("alert('This email is already registered with Fashion Street.');");
-				   out.println("location='index.jsp';");
-				   out.println("</script>");   
-			}
-		}
-		*/
 	}
 
 }

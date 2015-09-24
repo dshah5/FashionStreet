@@ -48,10 +48,8 @@ public class User implements Serializable {
 
 		Context ctx = null;
 		Connection con = null;
-
-		PreparedStatement ps = null;
-
-		ResultSet rs = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
 
 		try {
 			// Lookup for dataSource
@@ -82,26 +80,7 @@ public class User implements Serializable {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				if (ctx != null) {
-					ctx.close();
-				}
-				if (con != null) {
-					con.close();
-				}
-				if (ps != null) {
-					ps.close();
-				}
-				if (rs != null) {
-					rs.close();
-				}
-			} catch (NamingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			this.closer(ctx, con, ps, rs);
 		}
 
 		return false;
@@ -111,10 +90,8 @@ public class User implements Serializable {
 
 		Context ctx = null;
 		Connection con = null;
-
-		PreparedStatement ps = null;
-
-		ResultSet rs = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
 
 		try {
 
@@ -143,26 +120,7 @@ public class User implements Serializable {
 			e.printStackTrace();
 
 		} finally {
-			try {
-				if (ctx != null) {
-					ctx.close();
-				}
-				if (con != null) {
-					con.close();
-				}
-				if (ps != null) {
-					ps.close();
-				}
-				if (rs != null) {
-					rs.close();
-				}
-			} catch (NamingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			this.closer(ctx, con, ps, rs);
 		}
 
 		return false;
@@ -172,10 +130,8 @@ public class User implements Serializable {
 		
 		Context ctx = null;
 		Connection con = null;
-
-		PreparedStatement ps = null;
-
-		ResultSet rs = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
 		
 		try {
 
@@ -204,26 +160,32 @@ public class User implements Serializable {
 			e.printStackTrace();
 
 		} finally {
-			try {
-				if (ctx != null) {
-					ctx.close();
-				}
-				if (con != null) {
-					con.close();
-				}
-				if (ps != null) {
-					ps.close();
-				}
-				if (rs != null) {
-					rs.close();
-				}
-			} catch (NamingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			this.closer(ctx, con, ps, rs);
+		}
+		
+	}
+	
+	public void closer(Context ctx,Connection con,PreparedStatement ps,ResultSet rs){
+		
+		try {
+			if (ctx != null) {
+				ctx.close();
 			}
+			if (con != null) {
+				con.close();
+			}
+			if (ps != null) {
+				ps.close();
+			}
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 	}
