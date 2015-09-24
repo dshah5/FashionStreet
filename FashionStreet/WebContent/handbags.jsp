@@ -122,7 +122,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="images/w_pic1.jpg" alt=""/>
 					<h3>branded handbags</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$289<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -132,7 +132,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="images/w_pic2.jpg" alt=""/>
 					<h3>branded handbags</h3>
 					<div class="price">
-						<h4>$299 <span>indulge</span></h4>
+						<h4>$499 <span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -142,7 +142,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="images/w_pic3.jpg" alt=""/>
 					<h3>branded handbags</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$799<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -155,7 +155,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="images/w_pic4.jpg" alt=""/>
 					<h3>branded handbags</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$296<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -165,7 +165,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="images/w_pic5.jpg" alt=""/>
 					<h3>branded handbags</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$229<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -175,7 +175,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="images/w_pic6.jpg" alt=""/>
 					<h3>branded handbags</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$595<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>

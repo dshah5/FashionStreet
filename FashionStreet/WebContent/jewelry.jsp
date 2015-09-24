@@ -118,7 +118,7 @@
 					<img src="images/NI006.jpg" alt=""/>
 					<h3>branded jewellery</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$295<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -128,7 +128,7 @@
 					<img src="images/NI005.jpg" alt=""/>
 					<h3>branded jewellery</h3>
 					<div class="price">
-						<h4>$299 <span>indulge</span></h4>
+						<h4>$399 <span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -138,7 +138,7 @@
 					<img src="images/NI001.jpg" alt=""/>
 					<h3>branded jewellry</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$279<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -151,7 +151,7 @@
 					<img src="images/NI002.jpg" alt=""/>
 					<h3>branded jewellry</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$599<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -161,7 +161,7 @@
 					<img src="images/NI003.jpg" alt=""/>
 					<h3>branded jewellry</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$759<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -171,7 +171,7 @@
 					<img src="images/NI004.jpg" alt=""/>
 					<h3>branded jewellry</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$749<span>indulge</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
