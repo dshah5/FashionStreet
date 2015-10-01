@@ -20,7 +20,15 @@ public class SearchService {
 			return "http://localhost:8081/FashionStreet/shoes.jsp";
 		} else if (searchText.equalsIgnoreCase("belts")){
 			return "http://localhost:8081/FashionStreet/belts.jsp";
-		}
-		else return "http://localhost:8081/FashionStreet/register.jsp";
+		} else if (searchText.equalsIgnoreCase("wallets")){
+			return "http://localhost:8081/FashionStreet/wallets.jsp";
+		} else if (searchText.equalsIgnoreCase("handbags")){
+			return "http://localhost:8081/FashionStreet/handbags.jsp";
+		} else if (searchText.equalsIgnoreCase("jewelry")){
+			return "http://localhost:8081/FashionStreet/jewelry.jsp";
+		} else if (searchText.equalsIgnoreCase("sale")){
+			return "http://localhost:8081/FashionStreet/sale.jsp";
+		} 
+		else return "";
 	 }
 }

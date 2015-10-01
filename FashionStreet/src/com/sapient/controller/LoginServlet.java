@@ -55,7 +55,7 @@ public class LoginServlet extends HttpServlet {
 		else {
 			HttpSession session = request.getSession(true);
 			session.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Enter"
-					+ "correct username or password"+"</p>");
+					+ " correct username or password"+"</p>");
 			
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			

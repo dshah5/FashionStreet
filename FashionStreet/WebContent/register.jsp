@@ -33,7 +33,7 @@
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
-			<li><a class="active-icon c1" href="#"><i>$300</i></a>
+			<li><a class="active-icon c1" href="#"><i>$0</i></a>
 				<ul class="sub-icon1 list">
 					<li><h3>shopping cart empty</h3><a href=""></a></li>
 					<li><p>if items in your wish list are missing, <a href="contact.jsp">contact us</a> to view them</p></li>
