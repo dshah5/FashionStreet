@@ -43,8 +43,9 @@
 		</div>
 		<div class="h_search">
     		<form>
-    			<input type="text" value="">
-    			<input type="submit" value="">
+    			<input type="text" id="searchText" value="">
+    			<input type="submit" value="" id="searchButton">
+    			<script src="js/code.js"></script>
     		</form>
 		</div>
 		<div class="clear"></div>
@@ -63,7 +64,19 @@
 				<li><a href="belts.jsp">belts</a></li> |
 				<li><a href="shoes.jsp">shoes</a></li> |
 				<li><a href="sale.jsp">sale</a></li>
-				</ul>
+				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
+				<c:choose>
+    				<c:when test="${not empty name}">
+       					<li><a href="profile.jsp">${name}</a></li> |
+    					<li><a href="logout">logout</a></li>
+    					
+    				</c:when>
+    				<c:otherwise>
+        				<li><a href="login.jsp">login</a></li> |
+						<li><a href="register.jsp">register</a></li>
+    				</c:otherwise>
+				</c:choose>
+			</ul>
 		</div>
 		
 		<div class="top-nav">
@@ -105,10 +118,10 @@
     		var d=document.form.email.value;
     		var e=document.form.cpassword.value;
     		if (a==null || a=="" || b==null || b=="" || c==null || c=="" || d==null || d=="" || e==null || e==""){
-      			alert("Please Fill All Required Fields");
+      			//alert("Please Fill All Required Fields");
       			return false;
       		} else if (e != b) {
-      			alert("Passwords do not match.");
+      			//alert("Passwords do not match.");
       			return false;
       		}
     	}
@@ -128,7 +141,7 @@
 						    </div>
 						    <div>
 						    	<span><label>E-mail</label></span>
-						    	<span><input name="email" type="text" id="email" value="" class="textbox"></span>
+						    	<span><input name="email" type="email" id="email" value="" class="textbox"></span>
 						    </div>
 						    <div>
 						     	<span><label>Password</label></span>
@@ -141,7 +154,13 @@
 						   <div>
 						   		<span><input type="submit" class="" value="Sign Up"></span>
 						  </div>
+						  <!-- <div>
+						   		<button id="restButton">Check Values</button>
+						   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+								<script src="js/code.js"></script>
+						  </div> -->
 					    </form>
+					    
 				    </div>
   				<div class="clear"></div>		
 			  </div>

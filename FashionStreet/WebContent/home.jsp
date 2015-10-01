@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
 
 <title>Fashion Street</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -80,7 +79,8 @@
 		<div class="h_search">
     		<form>
     			<input type="text" value="">
-    			<input type="submit" value="">
+    			<input type="submit" value="" id="searchButton">
+    			<script src="js/code.js"></script>
     		</form>
 		</div>
 		<div class="clear"></div>

@@ -47,7 +47,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</li>
 		</ul>
 		</div>
-		
+		<div class="h_search">
+    		<form>
+    			<input type="text" value="">
+    			<input type="submit" value="" id="searchButton">
+    		</form>
+		</div>
 		<div class="clear"></div>
 	</div>
 </div>
