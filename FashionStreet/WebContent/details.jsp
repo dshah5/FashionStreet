@@ -19,6 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link rel="stylesheet" type="text/css" href="css/productviewgallery.css" media="all" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/cloud-zoom.1.0.3.min.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
@@ -178,9 +179,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!-- start span1_of_1 -->
 			<div class="span1_of_1_des">
 				  <div class="desc1">
-					<h3>Lorem Ipsum is simply dummy text </h3>
+					<h3>Puma Sneakers</h3>
 					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-					<h5>Rs. 399 <a href="#">click for offer</a></h5>
+					<h5>Rs. 499</h5>
 					<div class="available">
 						<h4>Available Options :</h4>
 						<ul>
@@ -193,10 +194,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</select></li>
 							<li>Size:
 								<select>
-									<option>L</option>
-									<option>XL</option>
 									<option>S</option>
 									<option>M</option>
+									<option>L</option>
+									<option>XL</option>
 								</select>
 							</li>
 							<li>Num:
@@ -211,10 +212,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</ul>
 						<div class="btn_form">
 							<form>
-								<input type="submit" value="add to cart" title="" />
+								<input type="submit" value="add to cart" title="" id="addToCartBtn"/>
 							</form>
 						</div>
-						<span class="span_right"><a href="#">login to save in wishlist </a></span>
+						
 						<div class="clear"></div>
 					</div>
 					<div class="share-desc">

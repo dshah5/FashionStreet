@@ -16,6 +16,7 @@
 	<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
 	<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
 	<script type="text/javascript" src="js/jquery.cslider.js"></script>
+	<script type="text/javascript" src="js/code.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$('#da-slider').cslider();
@@ -80,7 +81,7 @@
     		<form>
     			<input type="text" id="searchText" value="">
     			<input type="submit" value="" id="searchButton">
-    			<script src="js/code.js"></script>
+    			
     		</form>
 		</div>
 		<div class="clear"></div>

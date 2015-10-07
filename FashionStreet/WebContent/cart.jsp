@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Fashion Street</title>
@@ -43,10 +49,9 @@
 		</div>
 		<div class="h_search">
     		<form>
-    			<script src="js/code.js"></script>
     			<input type="text" id="searchText" value="">
     			<input type="submit" value="" id="searchButton">
-    			
+    			<script src="js/code.js"></script>
     		</form>
 		</div>
 		<div class="clear"></div>
@@ -109,66 +114,12 @@
 <!-- start main -->
 <div class="main_bg">
 <div class="wrap">	
-<div class="main">
-
-	<script type="text/javascript">
-    	function validateForm(){
-    		var a=document.form.lname.value;
-    		var b=document.form.password.value;
-    		var c=document.form.fname.value;
-    		var d=document.form.email.value;
-    		var e=document.form.cpassword.value;
-    		if (a==null || a=="" || b==null || b=="" || c==null || c=="" || d==null || d=="" || e==null || e==""){
-      			//alert("Please Fill All Required Fields");
-      			return false;
-      		} else if (e != b) {
-      			//alert("Passwords do not match.");
-      			return false;
-      		}
-    	}
-    </script>
-	 	 <div class="contact">				
-				  <div class="contact-form">
-			 	  	 	<h2>Sign Up Today!</h2>
-			 	  	 	  <%= request.getAttribute("errmessage") %> 
-			 	 	    <form method="post" name="form"  onsubmit="return validateForm()" action="register">
-					    	<div>
-						    	<span><label>First Name</label></span>
-						    	<span><input name="fname" type="text" id="fname" value="" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>Last Name</label></span>
-						    	<span><input name="lname" type="text" id="lname" value="" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>E-mail</label></span>
-						    	<span><input name="email" type="email" id="email" value="" class="textbox"></span>
-						    </div>
-						    <div>
-						     	<span><label>Password</label></span>
-						    	<span><input name="password" type="password" id="password" value="" class="textbox"></span>
-						    </div>
-						    <div>
-						     	<span><label>Confirm Password</label></span>
-						    	<span><input name="cpassword" type="password" id="cpassword" value="" class="textbox"></span>
-						    </div>
-						   <div>
-						   		<span><input type="submit" class="" value="Sign Up"></span>
-						  </div>
-						  <!-- <div>
-						   		<button id="restButton">Check Values</button>
-						   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-								<script src="js/code.js"></script>
-						  </div> -->
-					    </form>
-					    
-				    </div>
-  				<div class="clear"></div>		
-			  </div>
-		</div>
+	<div class="main">
+		<h2 class="style top">Your Shopping Cart</h2>
+		
+	</div>
 </div>
-
-</div>		
+</div>	
 <!-- start footer -->
 <div class="footer_bg">
 <div class="wrap">	
