@@ -14,11 +14,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/jquery.min.js"></script> 
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script> 
 	<!-- start gallery_sale -->
-	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
-	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.mixitup.min.js"></script>
 	<script type="text/javascript">
 	$(function () {
 		
@@ -65,8 +65,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</script>
 <!-- start top_js_button -->
 <jsp:useBean id="userBean" class="com.sapient.model.User" scope="session"></jsp:useBean>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/move-top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/easing.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -82,7 +82,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
+			<a href="home.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
@@ -152,7 +152,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			    </form>
 			</div>
 	          <div class="clear"> </div>
-	          <script src="js/responsive.menu.js"></script>
+	          <script src="${pageContext.request.contextPath}/js/responsive.menu.js"></script>
          </div>	
 	<div class="clear"></div>
 </div>
@@ -176,7 +176,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio logo1" data-cat="logo">
 				<div class="portfolio-wrapper">				
 					<a  href="details.jsp">
-						<img src="images/sale_pic1.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic1.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -190,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">			
 					<a  href="details.jsp">
-						<img src="images/sale_pic2.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic2.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -204,7 +204,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio web" data-cat="web">
 				<div class="portfolio-wrapper">						
 					<a  href="details.jsp">
-						<img src="images/sale_pic3.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic3.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -218,7 +218,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
 					<a  href="details.jsp">
-						<img src="images/sale_pic4.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic4.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -232,7 +232,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">
 					<a  href="details.jsp">
-						<img src="images/sale_pic5.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic5.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -246,7 +246,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
 					<a  href="details.jsp">
-						<img src="images/sale_pic6.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic6.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -260,7 +260,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio web" data-cat="web">
 				<div class="portfolio-wrapper">						
 					<a  href="details.jsp">
-						<img src="images/sale_pic7.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic7.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -274,7 +274,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
 					<a  href="details.jsp">
-						<img src="images/sale_pic8.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic8.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -288,7 +288,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">
 					<a  href="details.jsp">
-						<img src="images/sale_pic9.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic9.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -302,7 +302,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
 					<a  href="details.jsp">
-						<img src="images/sale_pic10.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic10.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -317,7 +317,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
 					<a  href="details.jsp">
-						<img src="images/sale_pic11.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic11.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -332,7 +332,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio logo1" data-cat="logo">
 				<div class="portfolio-wrapper">			
 					<a  href="details.jsp">
-						<img src="images/sale_pic12.jpg"  alt="Image 2" />
+						<img src="${pageContext.request.contextPath}/images/sale_pic12.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
 						<div class="label-text">
@@ -345,7 +345,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>																																							
 		</div>
 	</div><!-- container -->
-	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/fliplightbox.min.js"></script>
 	<script type="text/javascript">$('body').flipLightBox()</script>
 	<div class="clear"> </div>
 	</div>

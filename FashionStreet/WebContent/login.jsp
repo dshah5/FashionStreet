@@ -8,11 +8,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/jquery.min.js"></script> 
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script> 
 <!-- start top_js_button -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/move-top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/easing.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -29,7 +29,7 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
+			<a href="home.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
@@ -99,7 +99,7 @@
 			    </form>
 			</div>
 	          <div class="clear"> </div>
-	          <script src="js/responsive.menu.js"></script>
+	          <script src="${pageContext.request.contextPath}/js/responsive.menu.js"></script>
          </div>	
 	<div class="clear"></div>
 </div>

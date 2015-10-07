@@ -12,15 +12,13 @@ $('#restButton').click(function(){
     });
 
 $('#searchButton').click(function(){
-	alert("yo");
 	var searchText = $('#searchText').val();
     $.ajax({
         url : 'rest/search/do',
         type : 'PUT',
         data : {searchText : searchText},
         success : function(response) {
-        	alert(response);
-        	//window.location = response;
+        	window.location = response;
         }
     });
 });

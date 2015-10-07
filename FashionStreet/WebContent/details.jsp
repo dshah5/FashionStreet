@@ -14,20 +14,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'> 
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- start details -->
-<link rel="stylesheet" type="text/css" href="css/productviewgallery.css" media="all" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/cloud-zoom.1.0.3.min.js"></script>
-<script type="text/javascript" src="js/code.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
-<script type="text/javascript" src="js/productviewgallery.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/productviewgallery.css" media="all" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/cloud-zoom.1.0.3.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/code.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/productviewgallery.js"></script>
 <!-- start top_js_button -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/move-top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/easing.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
+			<a href="home.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
@@ -114,7 +114,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			    </form>
 			</div>
 	          <div class="clear"> </div>
-	          <script src="js/responsive.menu.js"></script>
+	          <script src="${pageContext.request.contextPath}/js/responsive.menu.js"></script>
          </div>	
 	<div class="clear"></div>
 </div>
@@ -136,11 +136,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    
 				    <div class="product-image"> 
 				        
-				           	<img src="images/0001-2.jpg" alt="Women Shorts" title="Women Shorts" />
+				           	<img src="${pageContext.request.contextPath}/images/0001-2.jpg" alt="Women Shorts" title="Women Shorts" />
 				        
 				   </div>
 					<script type="text/javascript">
-						var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"images/0001-2.jpg","main":"images/large/0001-2.jpg","thumb":"images/small/0001-2.jpg","label":""},"gallery":{"item_0":{"orig":"images/0001-2.jpg","main":"images/large/0001-2.jpg","thumb":"images/small/0001-2.jpg","label":""},"item_1":{"orig":"images/0001-1.jpg","main":"images/large/0001-1.jpg","thumb":"images/small/0001-1.jpg","label":""},"item_2":{"orig":"images/0001-5.jpg","main":"images/large/0001-5.jpg","thumb":"images/small/0001-5.jpg","label":""},"item_3":{"orig":"images/0001-3.jpg","main":"images/large/0001-3.jpg","thumb":"images/small/0001-3.jpg","label":""},"item_4":{"orig":"images/0001-4.jpg","main":"images/large/0001-4.jpg","thumb":"images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
+						var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"${pageContext.request.contextPath}/images/0001-2.jpg","main":"${pageContext.request.contextPath}/images/large/0001-2.jpg","thumb":"${pageContext.request.contextPath}/images/small/0001-2.jpg","label":""},"gallery":{"item_0":{"orig":"${pageContext.request.contextPath}/images/0001-2.jpg","main":"${pageContext.request.contextPath}/images/large/0001-2.jpg","thumb":"${pageContext.request.contextPath}/images/small/0001-2.jpg","label":""},"item_1":{"orig":"${pageContext.request.contextPath}/images/0001-1.jpg","main":"${pageContext.request.contextPath}/images/large/0001-1.jpg","thumb":"${pageContext.request.contextPath}/images/small/0001-1.jpg","label":""},"item_2":{"orig":"${pageContext.request.contextPath}/images/0001-5.jpg","main":"${pageContext.request.contextPath}/images/large/0001-5.jpg","thumb":"${pageContext.request.contextPath}/images/small/0001-5.jpg","label":""},"item_3":{"orig":"${pageContext.request.contextPath}/images/0001-3.jpg","main":"${pageContext.request.contextPath}/images/large/0001-3.jpg","thumb":"${pageContext.request.contextPath}/images/small/0001-3.jpg","label":""},"item_4":{"orig":"${pageContext.request.contextPath}/images/0001-4.jpg","main":"${pageContext.request.contextPath}/images/large/0001-4.jpg","thumb":"${pageContext.request.contextPath}/images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
 						    gallery_elmnt = jQblvg('.product-img-box'),
 						    galleryObj = new Object(),
 						    gallery_conf = new Object();
@@ -222,10 +222,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="share">
 							<h4>Share Product :</h4>
 							<ul class="share_nav">
-								<li><a href="#"><img src="images/facebook.png" title="facebook"></a></li>
-								<li><a href="#"><img src="images/twitter.png" title="Twiiter"></a></li>
-								<li><a href="#"><img src="images/rss.png" title="Rss"></a></li>
-								<li><a href="#"><img src="images/gpluse.png" title="Google+"></a></li>
+								<li><a href="#"><img src="${pageContext.request.contextPath}/images/facebook.png" title="facebook"></a></li>
+								<li><a href="#"><img src="${pageContext.request.contextPath}/images/twitter.png" title="Twiiter"></a></li>
+								<li><a href="#"><img src="${pageContext.request.contextPath}/images/rss.png" title="Rss"></a></li>
+								<li><a href="#"><img src="${pageContext.request.contextPath}/images/gpluse.png" title="Google+"></a></li>
 				    		</ul>
 						</div>
 						<div class="clear"></div>
@@ -306,7 +306,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			              </div>
 						  <div class="banner-wrap bottom_banner color_link">
 								<a href="#" class="main_link">
-								<figure><img src="images/delivery.png" alt=""></figure>
+								<figure><img src="${pageContext.request.contextPath}/images/delivery.png" alt=""></figure>
 								<h5><span>Free Shipping</span><br> on orders over $99.</h5><p>This offer is valid on all our store items.</p></a>
 						 </div>
 						 <div class="brands">

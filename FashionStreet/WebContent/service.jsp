@@ -14,11 +14,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/jquery.min.js"></script> 
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script> 
 <!-- start top_js_button -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/move-top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/easing.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -36,7 +36,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
+			<a href="home.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
@@ -106,7 +106,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			    </form>
 			</div>
 	          <div class="clear"> </div>
-	          <script src="js/responsive.menu.js"></script>
+	          <script src="${pageContext.request.contextPath}/js/responsive.menu.js"></script>
          </div>	
 	<div class="clear"></div>
 </div>
@@ -123,17 +123,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
 			<div class="ser-grid">
 				<div class="ser-grid-list">
-					<a href="details.jsp"><img src="images/icon1.png" alt=""></a>
+					<a href="details.jsp"><img src="${pageContext.request.contextPath}/images/icon1.png" alt=""></a>
 					<h5><a href="details.jsp">24/7 customer support</a></h5>
 					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
 				</div>
 				<div class="ser-grid-list">
-					<a href="details.jsp"><img src="images/icon2.png" alt=""></a>
+					<a href="details.jsp"><img src="${pageContext.request.contextPath}/images/icon2.png" alt=""></a>
 					<h5><a href="details.jsp">hygienic branded</a></h5>
 					<p class="para"> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
 				</div>
 				<div class="ser-grid-list">
-					<a href="details.jsp"><img src="images/icon3.png" alt=""></a>
+					<a href="details.jsp"><img src="${pageContext.request.contextPath}/images/icon3.png" alt=""></a>
 					<h5><a href="details.jsp">safely dispatch</a></h5>
 					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
 				</div>
@@ -141,17 +141,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="ser-grid">
 				<div class="ser-grid-list">
-					<a href="details.jsp"><img src="images/icon4.png" alt=""></a>
+					<a href="details.jsp"><img src="${pageContext.request.contextPath}/images/icon4.png" alt=""></a>
 					<h5><a href="details.jsp">100% look book</a></h5>
 					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
 				</div>
 				<div class="ser-grid-list">
-					<a href="details.jsp"><img src="images/icon5.png" alt=""></a>
+					<a href="details.jsp"><img src="${pageContext.request.contextPath}/images/icon5.png" alt=""></a>
 					<h5><a href="details.jsp">authentic products</a></h5>
 					<p class="para"> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
 				</div>
 				<div class="ser-grid-list">
-					<a href="details.jsp"><img src="images/icon6.png" alt=""></a>
+					<a href="details.jsp"><img src="${pageContext.request.contextPath}/images/icon6.png" alt=""></a>
 					<h5><a href="details.jsp">100% guarantee</a></h5>
 					<p class="para">It is a long established fact that a reader will be distracted by the page when looking at its layout.</p>
 				</div>

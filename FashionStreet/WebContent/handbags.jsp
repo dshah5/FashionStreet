@@ -14,11 +14,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/jquery.min.js"></script> 
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script> 
 <!-- start top_js_button -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/move-top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/easing.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="home.jsp"><img src="images/logo.png" alt=""/> </a>
+			<a href="home.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
@@ -105,7 +105,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			    </form>
 			</div>
 	          <div class="clear"> </div>
-	          <script src="js/responsive.menu.js"></script>
+	          <script src="${pageContext.request.contextPath}/js/responsive.menu.js"></script>
          </div>	
 	<div class="clear"></div>
 </div>
@@ -120,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
 				<a href="details.jsp">
-					<img src="images/w_pic1.jpg" alt=""/>
+					<img src="${pageContext.request.contextPath}/images/w_pic1.jpg" alt=""/>
 					<h3>HUSHPUPPIES(12345)</h3>
 				
 					<div class="price">
@@ -131,7 +131,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="grid1_of_3">
 				<a href="details.jsp">
-					<img src="images/w_pic2.jpg" alt=""/>
+					<img src="${pageContext.request.contextPath}/images/w_pic2.jpg" alt=""/>
 					<h3>HIDESIGN(11456)</h3>
 					<div class="price">
 						<h4>$499 <span>indulge</span></h4>
@@ -141,7 +141,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="grid1_of_3">
 				<a href="details.jsp">
-					<img src="images/w_pic3.jpg" alt=""/>
+					<img src="${pageContext.request.contextPath}/images/w_pic3.jpg" alt=""/>
 					<h3>ADDIDAS(65740)</h3>
 					<div class="price">
 						<h4>$299<span>indulge</span></h4>
@@ -154,7 +154,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
 				<a href="details.jsp">
-					<img src="images/w_pic4.jpg" alt=""/>
+					<img src="${pageContext.request.contextPath}/images/w_pic4.jpg" alt=""/>
 					<h3>FOSSIL(76096)</h3>
 					<div class="price">
 						<h4>$599<span>indulge</span></h4>
@@ -164,7 +164,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="grid1_of_3">
 				<a href="details.jsp">
-					<img src="images/w_pic5.jpg" alt=""/>
+					<img src="${pageContext.request.contextPath}/images/w_pic5.jpg" alt=""/>
 					<h3>PUMA(60123)</h3>
 					<div class="price">
 						<h4>$229<span>indulge</span></h4>
@@ -174,7 +174,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="grid1_of_3">
 				<a href="details.jsp">
-					<img src="images/w_pic6.jpg" alt=""/>
+					<img src="${pageContext.request.contextPath}/images/w_pic6.jpg" alt=""/>
 					<h3>HAIKU(88006)</h3>
 					<div class="price">
 						<h4>$699<span>indulge</span></h4>
