@@ -19,13 +19,13 @@ public class NavigController {
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public String registerPage() {
-		return "register";
+	public ModelAndView registerPage() {
+		return new ModelAndView("register", "regUser", new User());
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView registersPage() {
-		return new ModelAndView("login", "command", new User());
+		return new ModelAndView("login", "logUser", new User());
 	}
 
 	@RequestMapping(value = "/belts", method = RequestMethod.GET)

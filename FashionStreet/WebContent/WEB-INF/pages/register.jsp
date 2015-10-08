@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -131,7 +132,7 @@
 				  <div class="contact-form">
 			 	  	 	<h2>Sign Up Today!</h2>
 			 	  	 	  <%= request.getAttribute("errmessage") %> 
-			 	 	    <form method="post" name="form"  onsubmit="return validateForm()" action="register">
+			 	 	    <%-- <form method="post" name="form"  onsubmit="return validateForm()" action="register">
 					    	<div>
 						    	<span><label>First Name</label></span>
 						    	<span><input name="fname" type="text" id="fname" value="" class="textbox"></span>
@@ -160,7 +161,32 @@
 						   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 								<script src="js/code.js"></script>
 						  </div> -->
-					    </form>
+					    </form> --%>
+					    <form:form name="form" commandName="regUser" method="POST" action="/FashionStreet/reg" >
+					    	<div>
+						    	<span><label>First Name</label></span>
+						    	<span><form:input path="fname" name="fname" type="text" id="fname" value="" class="textbox"/></span>
+						    </div>
+						    <div>
+						    	<span><label>Last Name</label></span>
+						    	<span><form:input path="lname" name="lname" type="text" id="lname" value="" class="textbox"/></span>
+						    </div>
+						    <div>
+						    	<span><label>E-mail</label></span>
+						    	<span><form:input path="email" name="email" type="email" id="email" value="" class="textbox"/></span>
+						    </div>
+						    <div>
+						     	<span><label>Password</label></span>
+						    	<span><form:input path="password" name="password" type="password" id="password" value="" class="textbox"/></span>
+						    </div>
+						    <div>
+						     	<span><label>Confirm Password</label></span>
+						    	<span><form:input path="cpassword" name="cpassword" type="password" id="cpassword" value="" class="textbox"/></span>
+						    </div>
+						   <div>
+						   		<span><input type="submit" class="" value="Sign Up"></span>
+						  </div>
+					    </form:form>
 					    
 				    </div>
   				<div class="clear"></div>		
