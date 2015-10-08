@@ -121,21 +121,21 @@
     						</c:when>
 						</c:choose>
 			 	  	 	<h2>Log In</h2>
-			 	 	    <form:form method="post" action="/FashionStreet/loginverify" modelAttribute="loginUser">
+			 	 	    <form method="post" action="/FashionStreet/loginverify" >
 			 	 	        
 					    	<div>
-						    	<span><form:label path="email">Email-Id</form:label></span>
-						    	<span><form:input name="email" type="text" class="textbox" path="email" /></span>
+						    	<span>Email-Id</span>
+						    	<span><input name="email" type="text" class="textbox"/></span>
 						    </div>
 						    <div>
-						    	<span><form:label path="password">Password</form:label></span>
-						    	<span><form:input name="pword" type="password" class="textbox" path="password" /></span>
+						    	<span>Password</span>
+						    	<span><input name="password" type="password" class="textbox" /></span>
 						    </div>
 						   
 						   <div>
 						   		<span><input type="submit" class="" value="Submit"></span>
 						  </div>
-					    </form:form>
+					    </form>
 				    </div>
   				<div class="clear"></div>		
 			  </div>

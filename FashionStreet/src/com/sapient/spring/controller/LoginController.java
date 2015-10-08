@@ -22,10 +22,37 @@ import com.sapient.model.User;
 public class LoginController {
 	
 	@RequestMapping(value="/loginverify", method= RequestMethod.POST)
-	public String verifyUser(@ModelAttribute("userModel") User user, ModelMap model){
-		model.addAttribute("email",user.getEmail() );
-		model.addAttribute("email",user.getEmail() );
+	public String verifyUser(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
 		
-		return "login" ;
+		String email= request.getParameter("email").toLowerCase();
+		String password= request.getParameter("pword");
+		
+		User user=new User();
+		
+		user.setEmail(email);
+		
+		boolean status = user.validateLogin(email, password);
+		
+		if(status) {
+			HttpSession session = request.getSession(true);
+			//session.setMaxInactiveInterval(10);
+			session.setAttribute("userBean", user);
+			request.getRequestDispatcher("home.jsp").forward(request, response);
+
+			return "home" ;
+		}
+		else {
+			HttpSession session = request.getSession(true);
+			session.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Enter"
+					+ " correct username or password"+"</p>");
+			
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+			
+				
+			return "login" ;
+		}
+		
+		
+		
 	}
 }

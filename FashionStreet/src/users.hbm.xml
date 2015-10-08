@@ -7,11 +7,22 @@
 <hibernate-mapping>
 <class name="com.sapient.model.Users"  table = "USERS">
 
- <id name="email" type="String" column="email">
-  <generator class="native"/>
+ <id name="ids"  type="long"  column="id">
+  <generator class="assigned"/>
   
   </id>
  
+  <property name="email">
+  <column name="EMAIL"/>
+  
+  </property>
+  
+ 
+ <property name="password">
+  <column name="PASSWORD"/>
+  
+  </property>
+  
   <property name="firstName">
   <column name="FIRST_NAME"/>
   
@@ -22,11 +33,7 @@
   
   </property>
   
-  <property name="email">
-  <column name="EMAIL"/>
-  
-  </property>
-  
+ 
 
 
 </class>

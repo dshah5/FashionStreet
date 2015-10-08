@@ -1,7 +1,15 @@
 package com.sapient.model;
 
 public class Users {
-   private String email;
+	
+   private String ids;
+   public String getIds() {
+	return ids;
+}
+public void setIds(String ids) {
+	this.ids = ids;
+}
+private String email;
    private String password;
    private String firstName;
    private String lastName;

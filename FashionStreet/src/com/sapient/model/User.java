@@ -76,17 +76,18 @@ SessionFactory factory;
 		BasicConfigurator.configure();*/
 		try{
 			tx = session.beginTransaction();
-			String SQL_QUERY = "select * from Users users where users.email=:email and users.password=:password";
+			String SQL_QUERY = "select  * from Users users";
 			
 			Query query = session.createQuery(SQL_QUERY);
-			query.setParameter("email", email);
-			query.setParameter("password", password);
+			//query.setString("emails", email);
+			//query.setString("passwords", password);
 			
-			Iterator iterator = query.iterate();
-			
-			if(iterator.hasNext())
+			for(Iterator iterator = query.iterate();iterator.hasNext();)
 			{
-				
+				Object[] row = (Object[]) iterator.next();
+				System.out.println("id:  "  + row[1]);
+				System.out.println("First Name  " + row[2]);
+				iterator.next();
 				
 				return true;
 			}
