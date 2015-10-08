@@ -78,7 +78,7 @@
 		</ul>
 		</div>
 		<div class="h_search">
-    		<form method="POST" commandName="search" action="/FashionStreet/spring/search/test">
+    		<form method="POST" action="/FashionStreet/test">
     			<input type="text" id="searchText" value="">
     			<input type="submit" value="" id="searchButton">
     		</form>
