@@ -9,35 +9,71 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.sapient.model.User;
 
-
 @Controller
 public class NavigController {
-	
 
-	@RequestMapping(value="/home", method= RequestMethod.GET)
-	
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String homePage() {
 		return "home";
 	}
 
-
-	
-@RequestMapping(value="/register", method= RequestMethod.GET)
-
-public String registerPage() {
-	return "register";
-}
-
-@RequestMapping(value="/login", method= RequestMethod.GET)
-
-public ModelAndView registersPage() {
-	return new ModelAndView("login" , "command" , new User());
-}
-
-
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String registerPage() {
+		return "register";
 	}
 
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ModelAndView registersPage() {
+		return new ModelAndView("login", "command", new User());
+	}
 
+	@RequestMapping(value = "/belts", method = RequestMethod.GET)
+	public String beltsPage() {
+		return "belts";
+	}
 
+	@RequestMapping(value = "/cart", method = RequestMethod.GET)
+	public String cartPage() {
+		return "cart";
+	}
 
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String contactPage() {
+		return "contact";
+	}
 
+	@RequestMapping(value = "/details", method = RequestMethod.GET)
+	public String detailsPage() {
+		return "details";
+	}
+	
+	@RequestMapping(value = "/handbags", method = RequestMethod.GET)
+	public String handbagsPage() {
+		return "handbags";
+	}
+	
+	@RequestMapping(value = "/jewelry", method = RequestMethod.GET)
+	public String jewelryPage() {
+		return "jewelry";
+	}
+	
+	@RequestMapping(value = "/sale", method = RequestMethod.GET)
+	public String salePage() {
+		return "sale";
+	}
+	
+	@RequestMapping(value = "/shoes", method = RequestMethod.GET)
+	public String shoesPage() {
+		return "shoes";
+	}
+	
+	@RequestMapping(value = "/service", method = RequestMethod.GET)
+	public String servicePage() {
+		return "service";
+	}
+	
+	@RequestMapping(value = "/wallets", method = RequestMethod.GET)
+	public String walletsPage() {
+		return "wallets";
+	}
+}
