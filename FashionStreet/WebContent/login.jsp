@@ -118,7 +118,7 @@
     						</c:when>
 						</c:choose>
 			 	  	 	<h2>Log In</h2>
-			 	 	    <form method="post" action="login">
+			 	 	    <form method="post" action="/loginverify">
 			 	 	        
 					    	<div>
 						    	<span><label>Email-Id</label></span>

@@ -5,10 +5,19 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Iterator;
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 public class User implements Serializable {
 
@@ -45,45 +54,41 @@ public class User implements Serializable {
 	}
 
 	public boolean validateLogin(String email, String password) {
-
-		Context ctx = null;
-		Connection con = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-
-		try {
-			// Lookup for dataSource
-			ctx = new InitialContext();
-			DataSource ds = (DataSource) ctx
-					.lookup("java:comp/env/jdbc/userDB");
-
-			// obtain a connection
-			con = ds.getConnection();
-
-			ps = con.prepareStatement("SELECT EMAIL,PASSWORD,FIRST_NAME,LAST_NAME FROM USERS WHERE EMAIL=? AND PASSWORD=?");
-
-			ps.setString(1, email);
-			ps.setString(2, password);
-
-			rs = ps.executeQuery();
-
-			if (rs.next()) {
-
-				firstName = rs.getString(3);
-				lastName = rs.getString(4);
+		
+SessionFactory factory;
+		
+		factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		Transaction tx = null;
+		//Integer employeeID = null;
+		/*Logger Log = Logger.getLogger(MainApp.class.getName());
+		BasicConfigurator.configure();*/
+		try{
+			tx = session.beginTransaction();
+			String SQL_QUERY = "select * from Users users where users.email=:email and users.password=:password";
+			
+			Query query = session.createQuery(SQL_QUERY);
+			query.setParameter("email", email);
+			query.setParameter("password", password);
+			
+			Iterator iterator = query.iterate();
+			
+			if(iterator.hasNext())
+			{
+				
+				
 				return true;
-			} else
-				return false;
-		} catch (NamingException e) {
-			// TODO: handle exception
+			}
+		}catch(HibernateException e){
+			if(tx!=null){
+				tx.rollback();
+			}
 			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			this.closer(ctx, con, ps, rs);
+		}finally{
+			session.close();
 		}
-
-		return false;
+return false;
+		
 	}
 
 	public boolean isEmailRegistered(String email) {
@@ -125,6 +130,7 @@ public class User implements Serializable {
 		}
 
 		return false;
+		
 	}
 
 	public void updateUser(String email, String password, String firstName,

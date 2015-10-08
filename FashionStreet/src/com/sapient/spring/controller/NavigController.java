@@ -15,16 +15,20 @@ public class NavigController {
 		return "home";
 	}
 
-@RequestMapping(value="/login", method= RequestMethod.GET)
-	
-	public String loginPage() {
-		return "login";
-	}
+
 	
 @RequestMapping(value="/register", method= RequestMethod.GET)
 
 public String registerPage() {
 	return "register";
 }
+
+@RequestMapping(value="/loginverify", method= RequestMethod.GET)
+
+public String registersPage() {
+	return "login";
+}
+
+
 
 }
