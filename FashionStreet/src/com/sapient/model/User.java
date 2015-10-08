@@ -29,7 +29,7 @@ public class User implements Serializable {
 	private String email;
 	private String firstName;
 	private String lastName;
-	
+	private static int count=0;
 	
 	public String getPassword() {
 		return password;
@@ -64,7 +64,7 @@ public class User implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public boolean validateLogin(String email, String password) {
+	public boolean validateLogin(String emailID, String pword) {
 		
 		
 		Context ctx = null;
@@ -89,8 +89,8 @@ public class User implements Serializable {
 
 			rs = ps.executeQuery();
 			if (rs.next()) {
-			   email= rs.getString(1);
-			   this.password=password;
+			   email= emailID;
+			   password=pword;
 			   firstName=rs.getString(3);
 			   lastName=rs.getString(4);
 				return true;
@@ -117,7 +117,7 @@ public class User implements Serializable {
 
 	
 
-	public boolean isEmailRegistered(String email) {
+	public boolean isEmailRegistered(String emailID) {
 
 		Context ctx = null;
 		Connection con = null;
@@ -134,12 +134,16 @@ public class User implements Serializable {
 			// obtain a connection
 			con = ds.getConnection();
 
-			ps = con.prepareStatement("SELECT EMAIL FROM USERS WHERE EMAIL=?");
+			ps = con.prepareStatement("SELECT * FROM USERS WHERE EMAIL=?");
 
-			ps.setString(1, email);
+			ps.setString(1, emailID);
 
 			rs = ps.executeQuery();
 			if (rs.next()) {
+				email=rs.getString(1);
+				password=rs.getString(2);
+				firstName=rs.getString(3);
+				lastName=rs.getString(4);
 				return true;
 			} else
 				return false;
@@ -159,8 +163,10 @@ public class User implements Serializable {
 		
 	}
 
-	public void updateUser(String email, String password, String firstName,
-			String lastName) {
+	public void updateUser(String emailID, String pword, String fName,
+			String lName) {
+		
+		
 
 		Context ctx = null;
 		Connection con = null;
@@ -177,14 +183,17 @@ public class User implements Serializable {
 			// obtain a connection
 			con = ds.getConnection();
 
-			ps = con.prepareStatement("INSERT INTO USERS VALUES(?,?,?,?)");
-
-			ps.setString(1, email);
-			ps.setString(2, password);
-			ps.setString(3, firstName);
-			ps.setString(4, lastName);
+			ps = con.prepareStatement("INSERT INTO USERS VALUES(?,?,?,?,?)");
+           
+			ps.setString(1, emailID);
+			ps.setString(2, pword);
+			ps.setString(3, fName);
+			ps.setString(4, lName);
+			ps.setInt(5, ++count);
 
 			ps.executeQuery();
+			
+			
 
 		} catch (NamingException e) {
 

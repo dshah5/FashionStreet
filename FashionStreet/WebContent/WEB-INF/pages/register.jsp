@@ -165,11 +165,11 @@
 					    <form:form name="form" commandName="regUser" method="POST" action="/FashionStreet/reg" >
 					    	<div>
 						    	<span><label>First Name</label></span>
-						    	<span><form:input path="fname" name="fname" type="text" id="fname" value="" class="textbox"/></span>
+						    	<span><form:input path="firstName" name="fname" type="text" id="fname" value="" class="textbox"/></span>
 						    </div>
 						    <div>
 						    	<span><label>Last Name</label></span>
-						    	<span><form:input path="lname" name="lname" type="text" id="lname" value="" class="textbox"/></span>
+						    	<span><form:input path="lastName" name="lname" type="text" id="lname" value="" class="textbox"/></span>
 						    </div>
 						    <div>
 						    	<span><label>E-mail</label></span>
@@ -181,7 +181,7 @@
 						    </div>
 						    <div>
 						     	<span><label>Confirm Password</label></span>
-						    	<span><form:input path="cpassword" name="cpassword" type="password" id="cpassword" value="" class="textbox"/></span>
+						    	<span><input  name="cpassword" type="password" id="cpassword" value="" class="textbox"/></span>
 						    </div>
 						   <div>
 						   		<span><input type="submit" class="" value="Sign Up"></span>
