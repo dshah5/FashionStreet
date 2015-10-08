@@ -1,8 +1,13 @@
 package com.sapient.spring.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.sapient.model.User;
 
 
 @Controller
@@ -23,12 +28,16 @@ public String registerPage() {
 	return "register";
 }
 
-@RequestMapping(value="/loginverify", method= RequestMethod.GET)
+@RequestMapping(value="/login", method= RequestMethod.GET)
 
-public String registersPage() {
-	return "login";
+public ModelAndView registersPage() {
+	return new ModelAndView("login" , "command" , new User());
 }
 
 
+	}
 
-}
+
+
+
+

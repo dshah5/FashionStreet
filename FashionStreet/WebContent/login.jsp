@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -118,21 +121,21 @@
     						</c:when>
 						</c:choose>
 			 	  	 	<h2>Log In</h2>
-			 	 	    <form method="post" action="/loginverify">
+			 	 	    <form:form method="post" action="/FashionStreet/loginverify" modelAttribute="loginUser">
 			 	 	        
 					    	<div>
-						    	<span><label>Email-Id</label></span>
-						    	<span><input name="email" type="text" class="textbox"></span>
+						    	<span><form:label path="email">Email-Id</form:label></span>
+						    	<span><form:input name="email" type="text" class="textbox" path="email" /></span>
 						    </div>
 						    <div>
-						    	<span><label>Password</label></span>
-						    	<span><input name="pword" type="password" class="textbox"></span>
+						    	<span><form:label path="password">Password</form:label></span>
+						    	<span><form:input name="pword" type="password" class="textbox" path="password" /></span>
 						    </div>
 						   
 						   <div>
 						   		<span><input type="submit" class="" value="Submit"></span>
 						  </div>
-					    </form>
+					    </form:form>
 				    </div>
   				<div class="clear"></div>		
 			  </div>
