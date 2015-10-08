@@ -137,7 +137,7 @@
     						</c:when>
 						</c:choose>
 						<h2>Log In</h2>
-						<form method="post" action="/FashionStreet/loginverify">
+						<form method="post" action="/FashionStreet/log">
 
 							<div>
 								<span>Email-Id</span> <span><input name="email"

@@ -8,51 +8,40 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.sapient.model.User;
 
 
 @Controller
+@Scope("session")
 public class LoginController {
 	
-	@RequestMapping(value="/loginverify", method= RequestMethod.POST)
-	public String verifyUser(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+	
+	
+	@RequestMapping(value="/log", method= RequestMethod.POST)
+	public ModelAndView verifyUser(@ModelAttribute("userModel") User user,ModelMap model) throws ServletException, IOException{
 		
-		String email= request.getParameter("email").toLowerCase();
-		String password= request.getParameter("pword");
-		
-		User user=new User();
-		
-		user.setEmail(email);
-		
-		boolean status = user.validateLogin(email, password);
-		
-		if(status) {
-			HttpSession session = request.getSession(true);
-			//session.setMaxInactiveInterval(10);
-			session.setAttribute("userBean", user);
-			request.getRequestDispatcher("home.jsp").forward(request, response);
+		model.addAttribute("email",user.getEmail());
 
-			return "home" ;
+		model.addAttribute("fName",user.getFirstName());
+
+		model.addAttribute("lName",user.getLastName());
+
+		if(user.validateLogin(user.getEmail(), user.getPassword())) {
+		return new ModelAndView("home","command",new User());
+		
 		}
-		else {
-			HttpSession session = request.getSession(true);
-			session.setAttribute("errmessage", "<p style='text-align:center;color:red;font:24px;font-family:verdana'>"+"Enter"
-					+ " correct username or password"+"</p>");
-			
-			request.getRequestDispatcher("login.jsp").forward(request, response);
-			
-				
-			return "login" ;
+		else 
+		{
+			return new ModelAndView("login","logUser", new User());
 		}
-		
-		
-		
 	}
 }
