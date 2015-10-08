@@ -89,6 +89,10 @@ public class User implements Serializable {
 
 			rs = ps.executeQuery();
 			if (rs.next()) {
+			   email= rs.getString(1);
+			   this.password=password;
+			   firstName=rs.getString(3);
+			   lastName=rs.getString(4);
 				return true;
 			} else
 				return false;

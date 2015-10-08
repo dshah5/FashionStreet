@@ -15,6 +15,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sapient.model.User;
@@ -22,6 +23,7 @@ import com.sapient.model.User;
 
 @Controller
 @Scope("session")
+@SessionAttributes("logsesh")
 public class LoginController {
 	
 	
@@ -36,12 +38,16 @@ public class LoginController {
 		model.addAttribute("lName",user.getLastName());
 
 		if(user.validateLogin(user.getEmail(), user.getPassword())) {
-		return new ModelAndView("home","command",new User());
+			ModelAndView mv = new ModelAndView("home","command",new User());
+			mv.addObject("logsesh", user.getFirstName());
+			mv.setViewName("home");
+			System.out.println(user.getFirstName());
+			return mv;
 		
 		}
 		else 
 		{
-			return new ModelAndView("login","logUser", new User());
+			return new ModelAndView("login");
 		}
 	}
 }

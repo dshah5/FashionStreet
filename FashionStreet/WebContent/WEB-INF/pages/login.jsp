@@ -65,7 +65,7 @@
 				<li><a href="belts.jsp">belts</a></li> |
 				<li><a href="shoes.jsp">shoes</a></li> |
 				<li><a href="sale.jsp">sale</a></li>
-				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
+				<c:set var="name" value="${fName}"/>
 				<c:choose>
     				<c:when test="${not empty name}">
        					<li><a href="profile.jsp">${name}</a></li> |
