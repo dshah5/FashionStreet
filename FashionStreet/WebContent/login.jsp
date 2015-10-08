@@ -137,7 +137,7 @@
     						</c:when>
 						</c:choose>
 						<h2>Log In</h2>
-						<%-- <form method="post" action="/FashionStreet/loginverify">
+						<form method="post" action="/FashionStreet/loginverify">
 
 							<div>
 								<span>Email-Id</span> <span><input name="email"
@@ -151,21 +151,8 @@
 							<div>
 								<span><input type="submit" class="" value="Submit"></span>
 							</div>
-						</form> --%>
-						<form:form commandName="logUser" method="POST" action="/FashionStreet/log">
-							<div>
-								<span>Email-Id</span> 
-								<span><form:input path="email" name="email" type="text" class="textbox" /></span>
-							</div>
-							<div>
-								<span>Password</span> <span><form:input path="password" name="password"
-									type="password" class="textbox" /></span>
-							</div>
-
-							<div>
-								<span><input type="submit" class="" value="Submit"></span>
-							</div>
-						</form:form>
+						</form> 
+						
 					</div>
 					<div class="clear"></div>
 				</div>
