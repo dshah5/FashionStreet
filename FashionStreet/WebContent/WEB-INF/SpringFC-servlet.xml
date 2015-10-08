@@ -3,16 +3,25 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="
- http://www.springframework.org/schema/beans
- http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
- http://www.springframework.org/schema/context
- http://www.springframework.org/schema/context/spring-context-4.0.xsd
- http://www.springframework.org/schema/mvc
- http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+ 	http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context-4.0.xsd
+ 	http://www.springframework.org/schema/mvc
+ 	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+ 	http://www.springframework.org/schema/tx
+ 	http://www.springframework.org/schema/mvc/spring-tx.xsd
+ 	http://www.springframework.org/schema/aop
+ 	http://www.springframework.org/schema/mvc/spring-aop.xsd">
 	<mvc:annotation-driven />
 
+	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    
 
 	<mvc:resources mapping="/images/*" location="/images/" />
 	<mvc:resources mapping="/css/*" location="/css/" />
@@ -21,9 +30,10 @@
 
 
 
-	<context:component-scan base-package="com.sapient.spring.controller"/>
-	
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<context:component-scan base-package="com.sapient.spring.controller" />
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/pages/" />
 		<property name="suffix" value=".jsp" />
 	</bean>

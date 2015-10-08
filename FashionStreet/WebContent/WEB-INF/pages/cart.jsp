@@ -116,7 +116,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">	
 	<div class="main">
 		<h2 class="style top">Your Shopping Cart</h2>
-		
+		<table border="1" cellpadding="10px" width="100%" style="border-collapse: collapse">
+			<c:forEach items=<%= request.getSession().getAttribute("cart") %> var="c">
+				<tr>
+					<td>${c.ID}</td>
+					<td>${c.name}</td>
+					<td>${c.price}</td>
+					<td>${c.quantity}</td>
+					<td>
+						<a href="./remove.htm?id=${c.ID}" onclick="return confirm('Are you sure?')">Remove</a>
+					</td>
+				</tr>
+			</c:forEach>
+				<tr>
+					<td colspan="5">
+						Total: <%= request.getSession().getAttribute("total") %>
+					</td>
+		</table>
+		<a href="./form.htm">Continue Shopping</a>
 	</div>
 </div>
 </div>	
