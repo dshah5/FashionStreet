@@ -49,9 +49,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</ul>
 		</div>
 		<div class="h_search">
-    		<form method="POST" action="/FashionStreet/search">
-    			<input id="search" type="text"/>
-    			<input type="submit" id="searchButton"/>
+    		<form>
+    			<input type="text" id="searchText" value="">
+    			<input type="submit" value="" id="searchButton">
+    			<script src="js/code.js"></script>
     		</form>
 		</div>
 		<div class="clear"></div>

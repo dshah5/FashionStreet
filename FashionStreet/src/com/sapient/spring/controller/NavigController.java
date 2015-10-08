@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.sapient.model.SearchString;
 import com.sapient.model.User;
 
 @Controller
@@ -63,8 +64,8 @@ public class NavigController {
 	}
 	
 	@RequestMapping(value = "/shoes", method = RequestMethod.GET)
-	public String shoesPage() {
-		return "shoes";
+	public ModelAndView shoesPage() {
+		return new ModelAndView("shoes", "info", new SearchString());
 	}
 	
 	@RequestMapping(value = "/service", method = RequestMethod.GET)

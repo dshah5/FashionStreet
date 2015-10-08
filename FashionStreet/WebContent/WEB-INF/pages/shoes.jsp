@@ -49,8 +49,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</ul>
 		</div>
 		<div class="h_search">
-    		<form:form method="POST" action="/FashionStreet/search" commandName="info">
-    			<form:input path="search" type="text"/>
+    		<form:form commandName="info" method="POST" action="/FashionStreet/search" >
+    			<form:input path="search" id="searchText" type="text"/>
     			<input type="submit" id="searchButton"/>
     		</form:form>
 		</div>

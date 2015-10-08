@@ -21,10 +21,10 @@
 
 
 
-	<context:component-scan base-package="com.sapient.spring.controller" />
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/pages/"></property>
+	<context:component-scan base-package="com.sapient.spring.controller"/>
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 </beans>
