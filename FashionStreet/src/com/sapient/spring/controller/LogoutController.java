@@ -23,14 +23,20 @@ import com.sapient.model.User;
 
 @Controller
 @Scope("session")
-@SessionAttributes("logsesh")
+@SessionAttributes({"logsesh", "dispFName", "dispLName", "dispEmail"} ) 
 public class LogoutController {
 	
 	@RequestMapping(value="/out", method= RequestMethod.GET)
 	public ModelAndView verifyUser(@ModelAttribute("userModel") User user,ModelMap model) throws ServletException, IOException{
 			String logDisplay = "Login";
+			String firstDisplay = "";
+			String lastDisplay = "";
+			String emailDisplay = "";
 			ModelAndView mv = new ModelAndView("login", "command", new User());
 			mv.addObject("logsesh", logDisplay);
+			mv.addObject("dispFName", firstDisplay);
+			mv.addObject("dispLName", lastDisplay);
+			mv.addObject("dispEmail", emailDisplay);
 			return new ModelAndView("login");
 		
 	}

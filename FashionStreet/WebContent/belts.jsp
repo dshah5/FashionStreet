@@ -121,9 +121,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="grid1_of_3">
 				<a href="details.jsp">
 					<img src="${pageContext.request.contextPath}/images/belt1.jpg" alt=""/>
-					<h3>ARROW</h3>
+					<h3>GUCCI</h3>
 					<div class="price">
-						<h4>$100<span>indulge</span></h4>
+						<h4>$100<span><li><a href="http://www.gucci.com/us/styles/397660AP00T1000#">Indulge</a></li></span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>

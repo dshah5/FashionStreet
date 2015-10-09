@@ -130,6 +130,7 @@
 	 	 <div class="contact">				
 				  <div class="contact-form">
 			 	  	 	<h2>Sign Up Today!</h2>
+			 	  	 	
 			 	  	 	  <%= request.getAttribute("errmessage") %> 
 			 	 	    <form method="post" name="form"  onsubmit="return validateForm()" action="register">
 					    	<div>

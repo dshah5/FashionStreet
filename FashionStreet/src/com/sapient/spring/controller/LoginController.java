@@ -23,7 +23,7 @@ import com.sapient.model.User;
 
 @Controller
 @Scope("session")
-@SessionAttributes("logsesh")
+@SessionAttributes({"logsesh", "dispFName", "dispLName", "dispEmail"} ) 
 public class LoginController {
 	
 	
@@ -40,6 +40,9 @@ public class LoginController {
 		if(user.validateLogin(user.getEmail(), user.getPassword())) {
 			ModelAndView mv = new ModelAndView("home","command",new User());
 			mv.addObject("logsesh", user.getFirstName());
+			mv.addObject("dispFName", user.getFirstName());
+			mv.addObject("dispLName", user.getLastName());
+			mv.addObject("dispEmail", user.getEmail());
 			mv.setViewName("home");
 			System.out.println(user.getFirstName());
 			return mv;
