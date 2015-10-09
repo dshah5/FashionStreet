@@ -65,10 +65,10 @@
 				<li><a href="belts.jsp">belts</a></li> |
 				<li><a href="shoes.jsp">shoes</a></li> |
 				<li><a href="sale.jsp">sale</a></li>
-				<c:set var="name" value="${fName}"/>
+				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
-    				<c:when test="${not empty name}">
-       					<li><a href="profile.jsp">${name}</a></li> |
+    				<c:when test="${not empty logsesh}">
+       					<li><a href="profile.jsp">${logsesh}</a></li> |
     					<li><a href="logout">logout</a></li>
     					
     				</c:when>

@@ -75,24 +75,24 @@
 				<div class="h_menu">
 					<ul>
 						<li><a href="home.jsp">Home</a></li> |
-						<li><a href="handbags.jsp">handbags</a></li> |
-						<li><a href="jewelry.jsp">jewelry</a></li> |
-						<li><a href="wallets.jsp">wallets</a></li> |
-						<li><a href="belts.jsp">belts</a></li> |
-						<li><a href="shoes.jsp">shoes</a></li> |
-						<li><a href="sale.jsp">sale</a></li>
-						<c:set var="name" value="${sessionScope.userBean.firstName}" />
-						<c:choose>
-							<c:when test="${not empty name}">
-								<li><a href="profile.jsp">${name}</a></li> |
+				<li><a href="handbags.jsp">handbags</a></li> |
+				<li><a href="jewelry.jsp">jewelry</a></li> |
+				<li><a href="wallets.jsp">wallets</a></li> |
+				<li><a href="belts.jsp">belts</a></li> |
+				<li><a href="shoes.jsp">shoes</a></li> |
+				<li><a href="sale.jsp">sale</a></li>
+				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
+				<c:choose>
+    				<c:when test="${not empty logsesh}">
+       					<li><a href="profile.jsp">${logsesh}</a></li> |
     					<li><a href="logout">logout</a></li>
-
-							</c:when>
-							<c:otherwise>
-								<li><a href="login.jsp">login</a></li> |
+    					
+    				</c:when>
+    				<c:otherwise>
+        				<li><a href="login.jsp">login</a></li> |
 						<li><a href="register.jsp">register</a></li>
-							</c:otherwise>
-						</c:choose>
+    				</c:otherwise>
+				</c:choose>
 					</ul>
 				</div>
 

@@ -67,8 +67,8 @@
 				<li><a href="sale.jsp">sale</a></li>
 				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
-    				<c:when test="${not empty name}">
-       					<li><a href="profile.jsp">${name}</a></li> |
+    				<c:when test="${not empty logsesh}">
+       					<li><a href="profile.jsp">${logsesh}</a></li> |
     					<li><a href="logout">logout</a></li>
     					
     				</c:when>
@@ -119,10 +119,10 @@
     		var d=document.form.email.value;
     		var e=document.form.cpassword.value;
     		if (a==null || a=="" || b==null || b=="" || c==null || c=="" || d==null || d=="" || e==null || e==""){
-      			//alert("Please Fill All Required Fields");
+      			alert("Please Fill All Required Fields");
       			return false;
       		} else if (e != b) {
-      			//alert("Passwords do not match.");
+      			alert("Passwords do not match.");
       			return false;
       		}
     	}

@@ -207,7 +207,7 @@ public class User implements Serializable {
 
 	public void updateUser(String emailID, String pword, String fName,
 			String lName) {
-/*
+
 		Context ctx = null;
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -243,7 +243,7 @@ public class User implements Serializable {
 		} finally {
 			this.closer(ctx, con, ps, rs);
 		}
-*/
+
 	}
 
 	public void closer(Context ctx, Connection con, PreparedStatement ps,

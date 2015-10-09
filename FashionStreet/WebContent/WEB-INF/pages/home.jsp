@@ -99,12 +99,10 @@
 				<li><a href="belts.jsp">belts</a></li> |
 				<li><a href="shoes.jsp">shoes</a></li> |
 				<li><a href="sale.jsp">sale</a></li>
-				<li><a href="profile.jsp">${logsesh}</a></li> |
-				<li><a href="login.jsp">logout</a></li>
-				<c:set var="name" value="${sessionScope.userModel.firstName}"/>
-				<%-- <c:choose>
-    				<c:when test="${not empty name}">
-       					<li><a href="profile.jsp">${name}</a></li> |
+				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
+				<c:choose>
+    				<c:when test="${not empty logsesh}">
+       					<li><a href="profile.jsp">${logsesh}</a></li> |
     					<li><a href="logout">logout</a></li>
     					
     				</c:when>
@@ -112,7 +110,7 @@
         				<li><a href="login.jsp">login</a></li> |
 						<li><a href="register.jsp">register</a></li>
     				</c:otherwise>
-				</c:choose> --%>
+				</c:choose>
 			</ul>
 		</div>
 		
