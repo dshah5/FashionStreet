@@ -22,7 +22,7 @@
    
 
    <!-- List of XML mapping files -->
-   <mapping resource="users.hbm.xml"/>
+   <mapping resource="user.hbm.xml"/>
 
 
 </session-factory>

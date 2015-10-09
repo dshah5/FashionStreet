@@ -29,8 +29,8 @@ public class User implements Serializable {
 	private String email;
 	private String firstName;
 	private String lastName;
-	private static int count=0;
-	
+	private Integer id;
+
 	public String getPassword() {
 		return password;
 	}
@@ -38,7 +38,6 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 
 	public String getEmail() {
 		return email;
@@ -65,60 +64,102 @@ public class User implements Serializable {
 	}
 
 	public boolean validateLogin(String emailID, String pword) {
-		
-		
-		Context ctx = null;
-		Connection con = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
+		SessionFactory factory = new Configuration().configure()
+				.buildSessionFactory();
+		Session session = factory.openSession();
+
+		String SQL_QUERY = "select user.firstName,user.lastName from User user where user.email=:para1 and user.password=:para2";
+		Query query = session.createQuery(SQL_QUERY);
+		query.setParameter("para1", emailID);
+		query.setParameter("para2", pword);
+		Iterator iterator = query.iterate();
 
 		try {
+			if (iterator.hasNext()) {
+				Object[] row = (Object[]) iterator.next();
+				email = emailID;
+				password = pword;
 
-			// Lookup for dataSource
-			ctx = new InitialContext();
-			DataSource ds = (DataSource) ctx
-					.lookup("java:comp/env/jdbc/userDB");
+				firstName = (String) row[0];
 
-			// obtain a connection
-			con = ds.getConnection();
+				lastName = (String) row[1];
 
-			ps = con.prepareStatement("SELECT * FROM USERS WHERE EMAIL=? AND PASSWORD=?");
-
-			ps.setString(1, email);
-			ps.setString(2, password);
-
-			rs = ps.executeQuery();
-			if (rs.next()) {
-			   email= emailID;
-			   password=pword;
-			   firstName=rs.getString(3);
-			   lastName=rs.getString(4);
 				return true;
 			} else
 				return false;
-		} catch (NamingException e) {
+		} catch (HibernateException e) {
 
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-
-		} catch (SQLException e) {
-
-			e.printStackTrace();
-
 		} finally {
-			this.closer(ctx, con, ps, rs);
+			session.close();
 		}
-
+		/*
+		 * Context ctx = null; Connection con = null; PreparedStatement ps =
+		 * null; ResultSet rs = null;
+		 * 
+		 * try {
+		 * 
+		 * // Lookup for dataSource ctx = new InitialContext(); DataSource ds =
+		 * (DataSource) ctx .lookup("java:comp/env/jdbc/userDB");
+		 * 
+		 * // obtain a connection con = ds.getConnection();
+		 * 
+		 * ps =
+		 * con.prepareStatement("SELECT * FROM USERS WHERE EMAIL=? AND PASSWORD=?"
+		 * );
+		 * 
+		 * ps.setString(1, email); ps.setString(2, password);
+		 * 
+		 * rs = ps.executeQuery(); if (rs.next()) { email= emailID;
+		 * password=pword; firstName=rs.getString(3); lastName=rs.getString(4);
+		 * return true; } else return false; } catch (NamingException e) {
+		 * 
+		 * e.printStackTrace();
+		 * 
+		 * } catch (SQLException e) {
+		 * 
+		 * e.printStackTrace();
+		 * 
+		 * } finally { this.closer(ctx, con, ps, rs); }
+		 */
 		return false;
-		
+
 	}
 
-
-		
-
-	
-
 	public boolean isEmailRegistered(String emailID) {
+		
+		SessionFactory factory = new Configuration().configure()
+				.buildSessionFactory();
+		Session session = factory.openSession();
 
+		String SQL_QUERY = "select user.firstName,user.lastName from User user where user.email=:para1";
+		Query query = session.createQuery(SQL_QUERY);
+		query.setParameter("para1", emailID);
+
+		Iterator iterator = query.iterate();
+
+		try {
+			if (iterator.hasNext()) {
+				Object[] row = (Object[]) iterator.next();
+				email = emailID;
+			//assword = pword;
+
+				firstName = (String) row[0];
+
+				lastName = (String) row[1];
+
+				return true;
+			} else
+				return false;
+		} catch (HibernateException e) {
+
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+/*
 		Context ctx = null;
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -140,10 +181,10 @@ public class User implements Serializable {
 
 			rs = ps.executeQuery();
 			if (rs.next()) {
-				email=rs.getString(1);
-				password=rs.getString(2);
-				firstName=rs.getString(3);
-				lastName=rs.getString(4);
+				email = rs.getString(1);
+				password = rs.getString(2);
+				firstName = rs.getString(3);
+				lastName = rs.getString(4);
 				return true;
 			} else
 				return false;
@@ -160,13 +201,12 @@ public class User implements Serializable {
 		}
 
 		return false;
-		
+*/
+		return false;
 	}
 
 	public void updateUser(String emailID, String pword, String fName,
 			String lName) {
-		
-		
 
 		Context ctx = null;
 		Connection con = null;
@@ -183,17 +223,14 @@ public class User implements Serializable {
 			// obtain a connection
 			con = ds.getConnection();
 
-			ps = con.prepareStatement("INSERT INTO USERS VALUES(?,?,?,?,?)");
-           
+			ps = con.prepareStatement("INSERT INTO USERS(EMAIL,PASSWORD,FIRST_NAME,LAST_NAME) VALUES(?,?,?,?)");
+
 			ps.setString(1, emailID);
 			ps.setString(2, pword);
 			ps.setString(3, fName);
 			ps.setString(4, lName);
-			ps.setInt(5, ++count);
 
 			ps.executeQuery();
-			
-			
 
 		} catch (NamingException e) {
 
@@ -240,6 +277,14 @@ public class User implements Serializable {
 			return true;
 		} else
 			return false;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

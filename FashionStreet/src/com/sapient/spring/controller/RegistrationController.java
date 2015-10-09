@@ -32,7 +32,7 @@ public class RegistrationController {
 		
 		model.addAttribute("password",user.getPassword());
 
-		if(!user.isEmailRegistered(user.getEmail())) {
+		if(!user.isEmailRegistered(user.getEmail())&&user.validateName(user.getFirstName(), user.getLastName())) {
 			
 			user.updateUser(user.getEmail(), user.getPassword(), user.getFirstName(), user.getLastName());
 			ModelAndView mv = new ModelAndView("login","command",new User());

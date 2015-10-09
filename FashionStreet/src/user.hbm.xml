@@ -5,9 +5,9 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-<class name="com.sapient.model.Users"  table = "USERS">
+<class name="com.sapient.model.User"  table = "USERS">
 
- <id name="ids"  type="long"  column="id">
+ <id name="id"  type="integer"  column="id">
   <generator class="assigned"/>
   
   </id>
