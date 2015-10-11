@@ -13,6 +13,38 @@ import org.hibernate.cfg.Configuration;
 
 public class AddCart {
 	private Integer id;
+	
+	public static List<String> productNameList;
+	
+	public static List<String>  productCategoryList;
+	
+	public static List<Integer> productPriceList;
+	
+	public ArrayList<Integer> getProductPriceList() {
+		return (ArrayList<Integer>) productPriceList;
+	}
+
+	public static void setProductPriceList(List<Integer> productPriceList2) {
+		AddCart.productPriceList = productPriceList2;
+	}
+
+	public ArrayList<String> getProductCategoryList() {
+		return (ArrayList<String>) productCategoryList;
+	}
+
+	public static void setProductCategoryList(List<String> productCategoryList1) {
+		AddCart.productCategoryList = productCategoryList1;
+	}
+
+	public static ArrayList<String> getProductNameList() {
+		return (ArrayList<String>) productNameList;
+	}
+
+	public static void setProductNameList(List<String> productNameList1) {
+		AddCart.productNameList = productNameList1;
+	}
+
+	public static int price=0;
 	public Integer getId() {
 		return id;
 	}
@@ -20,6 +52,8 @@ public class AddCart {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
+	
 
 
 
@@ -107,7 +141,7 @@ public class AddCart {
 			}
 			
 			
-			displayCart();
+	//		displayCart();
 		}
 		catch (HibernateException e) {
 
@@ -118,7 +152,7 @@ public class AddCart {
 		}
 		
     }	
-		public void displayCart() {
+		public ArrayList<Integer>  getIDAllItems() {
 		Integer productId=0,quant=0;
 			SessionFactory factory = new Configuration().configure()
 					.buildSessionFactory();
@@ -126,56 +160,34 @@ public class AddCart {
 			Transaction tx=null;
 			try {
 				
-			   
 				
+			   
+				ArrayList<Integer> list=new ArrayList<Integer>();
 				String SQL_QUERY = "select productID, quantity from AddCart";
 				Query query = session.createQuery(SQL_QUERY);
 				List items= query.list();
+			  
+				for(Iterator it=items.iterator();it.hasNext();) {
 				
-				for(Iterator iterator = items.iterator();iterator.hasNext();) {
-					Object[] row = (Object[]) iterator.next();
-				
-				
-        
-				productId = (Integer) row[0];
-				quant = (Integer) row[1];
-				
-				SQL_QUERY = "select pName,category,price from Inventory where productId=:para1";
-				Query query1 = session.createQuery(SQL_QUERY);
-				query1.setInteger("para1", productId);
-				
-				List items1= query1.list();
-				
-				List productNameList =new  ArrayList();
-				List productCategoryList =new  ArrayList();
-				List productList =new  ArrayList();
-				
-				Iterator iterator1=items1.iterator();
-		      if(iterator1.hasNext()) {
-					Object[] row1 = (Object[]) iterator1.next();
 					
+					Object[] row = (Object[]) it.next();
 					
-				
-				System.out.println(row1[0]);
-				System.out.println(row1[1]);
-				System.out.println(row1[2]);
-				}
-				else {
+				list.add((Integer) row[0]);
 					
 				}
-				}
-			
+				return list;
+		
 		}
 			catch (HibernateException e) {
 
 				// TODO Auto-generated catch block
-				if(tx!=null) {
-					tx.rollback();
+				
 				    e.printStackTrace();
-				}
+				
 			} finally {
 				session.close();
 			}
+			return null;
 		
 		
 		
@@ -183,5 +195,91 @@ public class AddCart {
 	
     	
     }
+		
+		public ArrayList<Integer>  getQuantityOfIndividualItem() {
+			
+			
+			Integer productId=0,quant=0;
+			SessionFactory factory = new Configuration().configure()
+					.buildSessionFactory();
+			Session session = factory.openSession();
+			Transaction tx=null;
+			try {
+				
+				
+			   
+				ArrayList<Integer> list=new ArrayList<Integer>();
+				String SQL_QUERY = "select productID, quantity from AddCart";
+				Query query = session.createQuery(SQL_QUERY);
+				List items= query.list();
+			  
+				for(Iterator it=items.iterator();it.hasNext();) {
+				
+					
+					Object[] row = (Object[]) it.next();
+					
+				list.add((Integer) row[1]);
+					
+				}
+				return list;
+		
+		}
+			catch (HibernateException e) {
+
+				// TODO Auto-generated catch block
+				
+				    e.printStackTrace();
+				
+			} finally {
+				session.close();
+			}
+			return null;
+		
+		
+		
+		
+	/*
+			Integer productId=0,quant=0;
+				SessionFactory factory = new Configuration().configure()
+						.buildSessionFactory();
+				Session session = factory.openSession();
+				Transaction tx=null;
+				try {
+					
+					
+				   
+					ArrayList<Integer> list=new ArrayList<Integer>();
+					String SQL_QUERY = "select quantity from AddCart";
+					Query query = session.createQuery(SQL_QUERY);
+					List items= query.list();
+				  
+					for(Iterator it=items.iterator();it.hasNext();) {
+					
+						
+						Object[] row = (Object[]) it.next();
+						
+					list.add((Integer) row[0]);
+						
+					}
+					return list;
+			
+			}
+				catch (HibernateException e) {
+
+					// TODO Auto-generated catch block
+					
+					    e.printStackTrace();
+					
+				} finally {
+					session.close();
+				}
+				return null;
+			
+			
+			*/
+			
+		
+	    	
+	    }
 
 }
