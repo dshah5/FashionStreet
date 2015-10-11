@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jstl/core_rt"  prefix="c" %>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -129,33 +130,41 @@
     </script>
 	 	 <div class="contact">				
 				  <div class="contact-form">
-			 	  	 	<h2>Welcome ${logsesh}</h2>
+			 	  	 	<h2>Welcome ${dispFName} ${dispLName}</h2>
 
-			 	 	    <form method="post" name="form"  onsubmit="return validateForm()">
-					    	<div>
-						    	<span><label>First Name</label></span>
-						    	<span><input name="fname" type="text" id="fname" value="${logsesh}" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>Last Name</label></span>
-						    	<span><input name="lname" type="text" id="lname" value="${dispLName}" class="textbox"></span>
-						    </div>
-						    <div>
-						    	<span><label>E-mail</label></span>
-						    	<span><input name="email" type="email" id="email" value="${dispEmail}" class="textbox"></span>
-						    </div>
-						    <div>
-						     	<span><label>Password</label></span>
-						    	<span><input name="password" type="password" id="password" value="" class="textbox"></span>
-						    </div>
-						    <div>
-						     	<span><label>Confirm Password</label></span>
-						    	<span><input name="cpassword" type="password" id="cpassword" value="" class="textbox"></span>
-						    </div>
-						   <div>
+			 	 	  
+					    
+					    
+					    <form method="post" action="/FashionStreet/update"> 
+					    
+					    <div>
+								<span><input name="firstName"
+									type="hidden" value="${dispFName}" class="textbox" /></span>
+							</div>
+							
+							 <div>
+								<span><input name="lastName"
+									type="hidden" value="${dispLName}" class="textbox" /></span>
+							</div>
+
+							<div>
+								<span>Email-Id</span> <span><input name="email"
+									type="text" value="${dispEmail}" placeholder="${dispEmail}"class="textbox" /></span>
+							</div>
+							<div>
+								<span>Password</span> <span><input name="password" value="${dispPassword}"
+									type="password" class="textbox" /></span>
+							</div>
+							
+							<div>
+								<span>Confirm Password</span> <span><input name="confpassword" value="${dispPassword}"
+									type="password" class="textbox" /></span>
+							</div>
+							
+							  <div>
 						   		<span><input type="submit" class="" value="Update"></span>
 						  </div>
-					    </form>
+					</form>
 					    
 				    </div>
   				<div class="clear"></div>		

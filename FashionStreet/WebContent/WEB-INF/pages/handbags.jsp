@@ -63,23 +63,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="home.jsp">Home</a></li> |
-				<li><a href="handbags.jsp">handbags</a></li> |
-				<li><a href="jewelry.jsp">jewelry</a></li> |
-				<li><a href="wallets.jsp">wallets</a></li> |
-				<li><a href="belts.jsp">belts</a></li> |
-				<li><a href="shoes.jsp">shoes</a></li> |
-				<li><a href="sale.jsp">sale</a></li>
+				<li><a href="/FashionStreet/home">Home</a></li> |
+				<li><a href="/FashionStreet/handbags">handbags</a></li> |
+				<li><a href="/FashionStreet/jewelry">jewelry</a></li> |
+				<li><a href="/FashionStreet/wallets">wallets</a></li> |
+				<li><a href="/FashionStreet/belts">belts</a></li> |
+				<li><a href="/FashionStreet/shoes">shoes</a></li> |
+				<li><a href="/FashionStreet/sale">sale</a></li>
 				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
     				<c:when test="${not empty logsesh}">
-       					<li><a href="profile.jsp">${logsesh}</a></li> |
-    					<li><a href="logout">logout</a></li>
+       					<li><a href="/FashionStreet/profile">${logsesh}</a></li> |
+    					<li><a href="/FashionStreet/logout">logout</a></li>
     					
     				</c:when>
     				<c:otherwise>
-        				<li><a href="login.jsp">login</a></li> |
-						<li><a href="register.jsp">register</a></li>
+        				<li><a href="/FashionStreet/login">login</a></li> |
+						<li><a href="/FashionStreet/register">register</a></li>
     				</c:otherwise>
 				</c:choose>
 			</ul>
@@ -119,32 +119,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- start grids_of_3 -->
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/addtocart/12345">
 					<img src="${pageContext.request.contextPath}/images/w_pic1.jpg" alt=""/>
 					<h3>HUSHPUPPIES(12345)</h3>
 				
 					<div class="price">
-						<h4>$359<span>indulge</span></h4>
+						<h4>$359<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/addtocart/11456">
 					<img src="${pageContext.request.contextPath}/images/w_pic2.jpg" alt=""/>
 					<h3>HIDESIGN(11456)</h3>
 					<div class="price">
-						<h4>$499 <span>indulge</span></h4>
+						<h4>$499 <span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/addtocart/65740">
 					<img src="${pageContext.request.contextPath}/images/w_pic3.jpg" alt=""/>
 					<h3>ADDIDAS(65740)</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$299<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -153,31 +153,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/addtocart/76096">
 					<img src="${pageContext.request.contextPath}/images/w_pic4.jpg" alt=""/>
 					<h3>FOSSIL(76096)</h3>
 					<div class="price">
-						<h4>$599<span>indulge</span></h4>
+						<h4>$599<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/addtocart/60123">
 					<img src="${pageContext.request.contextPath}/images/w_pic5.jpg" alt=""/>
 					<h3>PUMA(60123)</h3>
 					<div class="price">
-						<h4>$229<span>indulge</span></h4>
+						<h4>$229<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/addtocart/88006">
 					<img src="${pageContext.request.contextPath}/images/w_pic6.jpg" alt=""/>
 					<h3>HAIKU(88006)</h3>
 					<div class="price">
-						<h4>$699<span>indulge</span></h4>
+						<h4>$699<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>

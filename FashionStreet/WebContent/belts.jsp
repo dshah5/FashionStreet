@@ -123,7 +123,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/belt1.jpg" alt=""/>
 					<h3>GUCCI</h3>
 					<div class="price">
-						<h4>$100<span><li><a href="http://www.gucci.com/us/styles/397660AP00T1000#">Indulge</a></li></span></h4>
+						<h4>$100<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -133,7 +133,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/belt2.jpg" alt=""/>
 					<h3>LEE</h3>
 					<div class="price">
-						<h4>$150 <span>indulge</span></h4>
+						<h4>$150<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -143,7 +143,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/belt3.jpg" alt=""/>
 					<h3>JOHN-PLAYERS</h3>
 					<div class="price">
-						<h4>$200<span>indulge</span></h4>
+						<h4>$200<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -156,7 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/winsome_b.jpg" alt=""/>
 					<h3>WRANGLER</h3>
 					<div class="price">
-						<h4>$250<span>indulge</span></h4>
+						<h4>$250<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -166,7 +166,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/winsome_br.jpg" alt=""/>
 					<h3>TURTLE</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$299<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -176,7 +176,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/winsome2.jpg" alt=""/>
 					<h3>PUMA</h3>
 					<div class="price">
-						<h4>$350<span>indulge</span></h4>
+						<h4>$350<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>

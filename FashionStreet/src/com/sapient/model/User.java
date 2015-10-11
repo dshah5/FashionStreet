@@ -18,7 +18,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+import javax.persistence.Entity; 
 public class User implements Serializable {
 
 	/**
@@ -143,9 +143,9 @@ public class User implements Serializable {
 			if (iterator.hasNext()) {
 				Object[] row = (Object[]) iterator.next();
 				email = emailID;
-			//assword = pword;
+			
 
-				firstName = (String) row[0];
+			firstName = (String) row[0];
 
 				lastName = (String) row[1];
 
@@ -207,7 +207,34 @@ public class User implements Serializable {
 
 	public void updateUser(String emailID, String pword, String fName,
 			String lName) {
+		
+		
+		SessionFactory factory = new Configuration().configure()
+				.buildSessionFactory();
+		Session session = factory.openSession();
+		Transaction tx=null;
+		try {
+		tx= session.beginTransaction();
 
+	   User user= new User();
+	   user.setEmail(emailID);
+       user.setPassword(pword);
+       user.setFirstName(fName);
+       user.setLastName(lName);
+	   session.saveOrUpdate(user);
+	   
+	   tx.commit();
+	   
+		}
+		catch (HibernateException e) {
+
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+        
+/*
 		Context ctx = null;
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -269,7 +296,7 @@ public class User implements Serializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+*/
 	}
 
 	public boolean validateName(String fname, String lname) {
@@ -286,5 +313,83 @@ public class User implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
+	public void editUser(String fName,String emailID,String password) {
+		
+			
+			
+			SessionFactory factory = new Configuration().configure()
+					.buildSessionFactory();
+			Session session = factory.openSession();
+			Transaction tx=null;
+			try {
+			tx= session.beginTransaction();
 
-}
+		//   User user= new User();
+		//   user.setEmail(emailID);
+	  //     user.setPassword(pword);
+	    //   user.setFirstName(fName);
+	//       user.setLastName(lName);
+		 //  session.saveOrUpdate(user);
+				
+				String hql = "UPDATE User set email=:para1,password=:para2 where firstName=:para3";
+			Query query = session.createQuery(hql);
+			query.setString("para1",emailID);
+			query.setString("para2",password);
+			query.setString("para3",fName);
+			int result = query.executeUpdate();
+			System.out.println("Rows affected: " + result);
+		   
+		   tx.commit();
+		   
+			}
+			catch (HibernateException e) {
+
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} finally {
+				session.close();
+			}
+	        
+	/*
+			Context ctx = null;
+			Connection con = null;
+			PreparedStatement ps = null;
+			ResultSet rs = null;
+
+			try {
+
+				// Lookup for dataSource
+				ctx = new InitialContext();
+				DataSource ds = (DataSource) ctx
+						.lookup("java:comp/env/jdbc/userDB");
+
+				// obtain a connection
+				con = ds.getConnection();
+
+				ps = con.prepareStatement("INSERT INTO USERS(EMAIL,PASSWORD,FIRST_NAME,LAST_NAME) VALUES(?,?,?,?)");
+
+				ps.setString(1, emailID);
+				ps.setString(2, pword);
+				ps.setString(3, fName);
+				ps.setString(4, lName);
+
+				ps.executeQuery();
+
+			} catch (NamingException e) {
+
+				e.printStackTrace();
+
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+
+			} finally {
+				this.closer(ctx, con, ps, rs);
+			}
+*/
+		}
+
+	}
+
+

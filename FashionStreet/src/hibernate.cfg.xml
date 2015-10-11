@@ -23,7 +23,8 @@
 
    <!-- List of XML mapping files -->
    <mapping resource="user.hbm.xml"/>
-
+   <mapping resource="addcart.hbm.xml"/>
+ <mapping resource="inventory.hbm.xml"/>
 
 </session-factory>
 

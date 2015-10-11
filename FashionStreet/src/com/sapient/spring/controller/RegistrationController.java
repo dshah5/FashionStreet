@@ -22,7 +22,7 @@ public class RegistrationController {
 	
 	
 	@RequestMapping(value="/reg", method= RequestMethod.POST)
-	public ModelAndView registerUser(@ModelAttribute("userModel") User user,ModelMap model) throws ServletException, IOException{
+	public ModelAndView registerUser(@ModelAttribute("userModel") User user,ModelMap model) {
 		
 		model.addAttribute("email",user.getEmail());
 
@@ -31,20 +31,26 @@ public class RegistrationController {
 		model.addAttribute("lastName",user.getLastName());
 		
 		model.addAttribute("password",user.getPassword());
+		
+		
+		ModelAndView mv = new ModelAndView();
 
-		if(!user.isEmailRegistered(user.getEmail())&&user.validateName(user.getFirstName(), user.getLastName())) {
+		if((!user.isEmailRegistered(user.getEmail()))&&user.validateName(user.getFirstName(), user.getLastName())) {
 			
 			user.updateUser(user.getEmail(), user.getPassword(), user.getFirstName(), user.getLastName());
-			ModelAndView mv = new ModelAndView("login","command",new User());
-			mv.addObject("logsesh", user.getFirstName());
+		//	ModelAndView mv = new ModelAndView("login","regUser",new User());
+			
+		//
+		//	mv.addObject("logsesh", user.getFirstName());
 			mv.setViewName("login");
 			System.out.println(user.getFirstName());
-			return mv;
+			return new ModelAndView("login","logUser",new User()) ;
 		
 		}
 		else 
 		{
-			return new ModelAndView("register");
+	
+			return new ModelAndView("register","regUser",new User()) ;
 		}
 	}
 }

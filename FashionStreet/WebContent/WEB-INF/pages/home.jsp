@@ -65,14 +65,14 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="home.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
+			<a href="/FashionStreet/home"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
 			<li><a class="active-icon c1" href="#"><i>$0</i></a>
 				<ul class="sub-icon1 list">
-					<li><h3>shopping cart empty</h3><a href=""></a></li>
-					<li><p>if items in your wish list are missing, <a href="contact.jsp">contact us</a> to view them</p></li>
+					<li><h3>Your Cart</h3><a href=""></a></li>
+					<li><p><a href="/FashionStreet/ViewCartController">ViewCart</a></p></li>
 				</ul>
 			</li>
 		</ul>
@@ -92,23 +92,23 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="home.jsp">Home</a></li> |
-				<li><a href="handbags.jsp">handbags</a></li> |
-				<li><a href="jewelry.jsp">jewelry</a></li> |
-				<li><a href="wallets.jsp">wallets</a></li> |
-				<li><a href="belts.jsp">belts</a></li> |
-				<li><a href="shoes.jsp">shoes</a></li> |
-				<li><a href="sale.jsp">sale</a></li>
+				<li><a href="/FashionStreet/home">Home</a></li> |
+				<li><a href="/FashionStreet/handbags">handbags</a></li> |
+				<li><a href="/FashionStreet/jewelry">jewelry</a></li> |
+				<li><a href="/FashionStreet/wallets">wallets</a></li> |
+				<li><a href="/FashionStreet/belts">belts</a></li> |
+				<li><a href="/FashionStreet/shoes">shoes</a></li> |
+				<li><a href="/FashionStreet/sale">sale</a></li>
 				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
     				<c:when test="${not empty logsesh}">
-       					<li><a href="profile.jsp">${logsesh}</a></li> |
-    					<li><a href="logout">logout</a></li>
+       					<li><a href="/FashionStreet/profile">${logsesh}</a></li> |
+    					<li><a href="/FashionStreet/out">logout</a></li>
     					
     				</c:when>
     				<c:otherwise>
-        				<li><a href="login.jsp">login</a></li> |
-						<li><a href="register.jsp">register</a></li>
+        				<li><a href="/FashionStreet/login">login</a></li> |
+						<li><a href="/FashionStreet/register">register</a></li>
     				</c:otherwise>
 				</c:choose>
 			</ul>
@@ -118,14 +118,14 @@
 	          <nav class="nav">	        	
 	    	    <a href="#" id="w3-menu-trigger"> </a>
 	                  <ul class="nav-list" style="">
-	            	        <li class="nav-item"><a class="active" href="index.jsp">Home</a></li>
-							<li class="nav-item"><a href="handbags.jsp">Handbags</a></li>
-							<li class="nav-item"><a href="jewelry.jsp">jewelry</a></li>
-							<li class="nav-item"><a href="wallets.jsp">wallets</a></li>
-							<li class="nav-item"><a href="belts.jsp">belts</a></li>
-							<li class="nav-item"><a href="shoes.jsp">shoes</a></li>
-							<li class="nav-item"><a href="sale.jsp">sale</a></li>
-							<li class="nav-item"><a href="login.jsp">login</a></li>
+	            	        <li class="nav-item"><a class="active" href="/FashionStreet/index">Home</a></li>
+							<li class="nav-item"><a href="/FashionStreet/handbags">Handbags</a></li>
+							<li class="nav-item"><a href="/FashionStreet/jewelry">jewelry</a></li>
+							<li class="nav-item"><a href="/FashionStreet/wallets">wallets</a></li>
+							<li class="nav-item"><a href="/FashionStreet/belts">belts</a></li>
+							<li class="nav-item"><a href="/FashionStreet/shoes">shoes</a></li>
+							<li class="nav-item"><a href="/FashionStreet/sale">sale</a></li>
+							<li class="nav-item"><a href="/FashionStreet/login">login</a></li>
 	                 </ul>
 	           </nav>
 	             <div class="search_box">
@@ -145,25 +145,25 @@
 				<div class="da-slide">
 					<h2>welcome to f street</h2>
 					<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-					<a href="details.jsp" class="da-link">shop now</a>
+					<a href="/FashionStreet/details" class="da-link">shop now</a>
 					<div class="da-img"><img src="${pageContext.request.contextPath}/images/slider1.png" alt="image01" /></div>
 				</div>
 				<div class="da-slide">
 					<h2>Easy management</h2>
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-					<a href="details.jsp" class="da-link">shop now</a>
+					<a href="/FashionStreet/details" class="da-link">shop now</a>
 					<div class="da-img"><img src="${pageContext.request.contextPath}/images/slider2.png" alt="image01" /></div>
 				</div>
 				<div class="da-slide">
 					<h2>Revolution</h2>
 					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-					<a href="details.jsp" class="da-link">shop now</a>
+					<a href="/FashionStreet/details" class="da-link">shop now</a>
 					<div class="da-img"><img src="${pageContext.request.contextPath}/images/slider3.png" alt="image01" /></div>
 				</div>
 				<div class="da-slide">
 					<h2>Quality Control</h2>
 					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-					<a href="details.jsp" class="da-link">shop now</a>
+					<a href="/FashionStreet/details" class="da-link">shop now</a>
 					<div class="da-img"><img src="${pageContext.request.contextPath}/images/slider4.png" alt="image01" /></div>
 				</div>
 				<nav class="da-arrows">
@@ -176,67 +176,67 @@
 <div class="wrap">
 <!----start-img-cursual---->
 	<div id="owl-demo" class="owl-carousel">
-		<div class="item" onclick="location.href='details.jsp';">
+		<div class="item" onclick="location.href='/FashionStreet/details';">
 			<div class="cau_left">
 				<img class="lazyOwl" data-src="${pageContext.request.contextPath}/images/c1.jpg" alt="Lazy Owl Image">
 			</div>
 			<div class="cau_left">
-				<h4><a href="details.jsp">branded shoes</a></h4>
-				<a href="details.jsp" class="btn">shop</a>
+				<h4><a href="/FashionStreet/details">branded shoes</a></h4>
+				<a href="/FashionStreet/details" class="btn">shop</a>
 			</div>
 		</div>	
-		<div class="item" onclick="location.href='details.jsp';">
+		<div class="item" onclick="location.href='/FashionStreet/details';">
 			<div class="cau_left">
 				<img class="lazyOwl" data-src="${pageContext.request.contextPath}/images/c2.jpg" alt="Lazy Owl Image">
 			</div>
 			<div class="cau_left">
-				<h4><a href="details.jsp">branded tees</a></h4>
-				<a href="details.jsp" class="btn">shop</a>
+				<h4><a href="/FashionStreet/details">branded tees</a></h4>
+				<a href="/FashionStreet/details" class="btn">shop</a>
 			</div>
 		</div>	
-		<div class="item" onclick="location.href='details.jsp';">
+		<div class="item" onclick="location.href='/FashionStreet/details';">
 			<div class="cau_left">
 				<img class="lazyOwl" data-src="${pageContext.request.contextPath}/images/c3.jpg" alt="Lazy Owl Image">
 			</div>
 			<div class="cau_left">
-				<h4><a href="details.jsp">branded jeens</a></h4>
-				<a href="details.jsp" class="btn">shop</a>
+				<h4><a href="/FashionStreet/details">branded jeens</a></h4>
+				<a href="/FashionStreet/details" class="btn">shop</a>
 			</div>
 		</div>	
-		<div class="item" onclick="location.href='details.jsp';">
+		<div class="item" onclick="location.href='/FashionStreet/details';">
 			<div class="cau_left">
 				<img class="lazyOwl" data-src="${pageContext.request.contextPath}/images/c2.jpg" alt="Lazy Owl Image">
 			</div>
 			<div class="cau_left">
-				<h4><a href="details.jsp">branded tees</a></h4>
-				<a href="details.jsp" class="btn">shop</a>
+				<h4><a href="/FashionStreet/details">branded tees</a></h4>
+				<a href="/FashionStreet/details" class="btn">shop</a>
 			</div>
 		</div>	
-		<div class="item" onclick="location.href='details.jsp';">
+		<div class="item" onclick="location.href='/FashionStreet/details';">
 			<div class="cau_left">
 				<img class="lazyOwl" data-src="${pageContext.request.contextPath}/images/c1.jpg" alt="Lazy Owl Image">
 			</div>
 			<div class="cau_left">
-				<h4><a href="details.jsp">branded shoes</a></h4>
-				<a href="details.jsp" class="btn">shop</a>
+				<h4><a href="/FashionStreet/details">branded shoes</a></h4>
+				<a href="/FashionStreet/details" class="btn">shop</a>
 			</div>
 		</div>	
-		<div class="item" onclick="location.href='details.jsp';">
+		<div class="item" onclick="location.href='/FashionStreet/details';">
 			<div class="cau_left">
 				<img class="lazyOwl" data-src="${pageContext.request.contextPath}/images/c2.jpg" alt="Lazy Owl Image">
 			</div>
 			<div class="cau_left">
-				<h4><a href="details.jsp">branded tees</a></h4>
-				<a href="details.jsp" class="btn">shop</a>
+				<h4><a href="/FashionStreet/details">branded tees</a></h4>
+				<a href="/FashionStreet/details" class="btn">shop</a>
 			</div>
 		</div>	
-		<div class="item" onclick="location.href='details.jsp';">
+		<div class="item" onclick="location.href='/FashionStreet/details';">
 			<div class="cau_left">
 				<img class="lazyOwl" data-src="${pageContext.request.contextPath}/images/c3.jpg" alt="Lazy Owl Image">
 			</div>
 			<div class="cau_left">
-				<h4><a href="details.jsp">branded jeens</a></h4>
-				<a href="details.jsp" class="btn">shop</a>
+				<h4><a href="/FashionStreet/details">branded jeens</a></h4>
+				<a href="/FashionStreet/details" class="btn">shop</a>
 			</div>
 		</div>	
 	</div>
@@ -257,7 +257,7 @@
 		<!-- start grids_of_3 -->
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/details">
 					<img src="${pageContext.request.contextPath}/images/pic1.jpg" alt=""/>
 					<h3>branded shoes</h3>
 					<div class="price">
@@ -267,7 +267,7 @@
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/details">
 					<img src="${pageContext.request.contextPath}/images/pic2.jpg" alt=""/>
 					<h3>branded t-shirts</h3>
 					<div class="price">
@@ -277,7 +277,7 @@
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/details">
 					<img src="${pageContext.request.contextPath}/images/pic3.jpg" alt=""/>
 					<h3>branded tees</h3>
 					<div class="price">
@@ -290,7 +290,7 @@
 		</div>
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/details">
 					<img src="${pageContext.request.contextPath}/images/pic4.jpg" alt=""/>
 					<h3>branded bags</h3>
 					<div class="price">
@@ -300,7 +300,7 @@
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/details">
 					<img src="${pageContext.request.contextPath}/images/pic5.jpg" alt=""/>
 					<h3>ems women bag</h3>
 					<div class="price">
@@ -310,7 +310,7 @@
 				</a>
 			</div>
 			<div class="grid1_of_3">
-				<a href="details.jsp">
+				<a href="/FashionStreet/details">
 					<img src="${pageContext.request.contextPath}/images/pic6.jpg" alt=""/>
 					<h3>branded cargos</h3>
 					<div class="price">
@@ -332,16 +332,16 @@
 		<!-- start grids_of_4 -->	
 		<div class="grids_of_4">
 			<div class="grid1_of_4">
-				<h4><a href="contact.jsp">Contact Us</a></h4>
+				<h4><a href="/FashionStreet/contact">Contact Us</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.jsp">About F Street</a></h4>
+				<h4><a href="/FashionStreet/service">About F Street</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.jsp">Common Questions</a></h4>
+				<h4><a href="/FashionStreet/service">Common Questions</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="contact.jsp">Store Locator</a></h4>
+				<h4><a href="/FashionStreet/contact">Store Locator</a></h4>
 			</div>
 			<div class="clear"></div>
 		</div>

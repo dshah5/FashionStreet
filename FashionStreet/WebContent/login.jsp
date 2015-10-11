@@ -135,7 +135,11 @@
 							<c:when test="${not empty error}">
        							${error}
     						</c:when>
-						</c:choose>
+    						<c:otherwise>
+        				
+    				</c:otherwise>
+				</c:choose>
+						
 						<h2>Log In</h2>
 						<form method="post" action="/FashionStreet/log">
 

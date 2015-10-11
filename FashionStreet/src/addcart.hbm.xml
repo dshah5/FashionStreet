@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.sapient.model.AddCart"  table = "CART">
+
+ <id name="id"  type="integer"  column="id">
+  <generator class="native"/>
+  
+  </id>
+ 
+  <property name="productID">
+  <column name="PID"/>
+  
+  </property>
+  
+ 
+ <property name="quantity">
+  <column name="QUANTITY"/>
+  
+  </property>
+  
+</class>
+
+
+
+</hibernate-mapping>

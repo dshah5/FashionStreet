@@ -23,7 +23,7 @@ import com.sapient.model.User;
 
 @Controller
 @Scope("session")
-@SessionAttributes({"logsesh", "dispFName", "dispLName", "dispEmail"} ) 
+@SessionAttributes({"logsesh", "dispFName", "dispLName", "dispEmail","dispPassword"} ) 
 public class LoginController {
 	
 	
@@ -31,26 +31,48 @@ public class LoginController {
 	@RequestMapping(value="/log", method= RequestMethod.POST)
 	public ModelAndView verifyUser(@ModelAttribute("userModel") User user,ModelMap model) throws ServletException, IOException{
 		
-		model.addAttribute("email",user.getEmail());
+	/*	model.addAttribute("email",user.getEmail());
 
 		model.addAttribute("fName",user.getFirstName());
 
 		model.addAttribute("lName",user.getLastName());
-
+		ModelAndView mv = new ModelAndView();
+*/
+		ModelAndView mv = new ModelAndView();
 		if(user.validateLogin(user.getEmail(), user.getPassword())) {
-			ModelAndView mv = new ModelAndView("home","command",new User());
+		
+			
+			mv.addObject("user", new User());
 			mv.addObject("logsesh", user.getFirstName());
 			mv.addObject("dispFName", user.getFirstName());
 			mv.addObject("dispLName", user.getLastName());
 			mv.addObject("dispEmail", user.getEmail());
-			mv.setViewName("home");
+			mv.addObject("dispPassword", user.getPassword());
+			
+			
+		mv.setViewName("home");
 			System.out.println(user.getFirstName());
 			return mv;
 		
 		}
 		else 
 		{
-			return new ModelAndView("login");
+			
+		//	mv.addObject("logsesh", user.getFirstName());
+		//	mv.addObject("dispFName", user.getFirstName());
+		//	mv.addObject("dispLName", user.getLastName());
+		//	mv.addObject("dispEmail", user.getEmail());
+		//	mv.addObject("dispPassword", user.getPassword());
+			
+			
+		
+		//	System.out.println(user.getFirstName());
+			
+			
+			
+			
+		
+			return new ModelAndView("login","logUser",new User());
 		}
 	}
 }

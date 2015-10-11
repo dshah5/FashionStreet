@@ -63,23 +63,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="home.jsp">Home</a></li> |
-				<li><a href="handbags.jsp">handbags</a></li> |
-				<li><a href="jewelry.jsp">jewelry</a></li> |
-				<li><a href="wallets.jsp">wallets</a></li> |
-				<li><a href="belts.jsp">belts</a></li> |
-				<li><a href="shoes.jsp">shoes</a></li> |
-				<li><a href="sale.jsp">sale</a></li>
+				<li><a href="/FashionStreet/home">Home</a></li> |
+				<li><a href="/FashionStreet/handbags">handbags</a></li> |
+				<li><a href="/FashionStreet/jewelry">jewelry</a></li> |
+				<li><a href="/FashionStreet/wallets">wallets</a></li> |
+				<li><a href="/FashionStreet/belts">belts</a></li> |
+				<li><a href="/FashionStreet/shoes">shoes</a></li> |
+				<li><a href="/FashionStreet/sale">sale</a></li>
 				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
     				<c:when test="${not empty logsesh}">
-       					<li><a href="profile.jsp">${logsesh}</a></li> |
-    					<li><a href="logout">logout</a></li>
+       					<li><a href="/FashionStreet/profile">${logsesh}</a></li> |
+    					<li><a href="/FashionStreet/logout">logout</a></li>
     					
     				</c:when>
     				<c:otherwise>
-        				<li><a href="login.jsp">login</a></li> |
-						<li><a href="register.jsp">register</a></li>
+        				<li><a href="/FashionStreet/login">login</a></li> |
+						<li><a href="/FashionStreet/register">register</a></li>
     				</c:otherwise>
 				</c:choose>
 			</ul>
@@ -123,7 +123,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/belt1.jpg" alt=""/>
 					<h3>ARROW</h3>
 					<div class="price">
-						<h4>$100<span>indulge</span></h4>
+						<h4>$100<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -133,7 +133,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/belt2.jpg" alt=""/>
 					<h3>LEE</h3>
 					<div class="price">
-						<h4>$150 <span>indulge</span></h4>
+						<h4>$150 <span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -143,7 +143,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/belt3.jpg" alt=""/>
 					<h3>JOHN-PLAYERS</h3>
 					<div class="price">
-						<h4>$200<span>indulge</span></h4>
+						<h4>$200<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -156,7 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/winsome_b.jpg" alt=""/>
 					<h3>WRANGLER</h3>
 					<div class="price">
-						<h4>$250<span>indulge</span></h4>
+						<h4>$250<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -166,7 +166,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/winsome_br.jpg" alt=""/>
 					<h3>TURTLE</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$299<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -176,7 +176,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/winsome2.jpg" alt=""/>
 					<h3>PUMA</h3>
 					<div class="price">
-						<h4>$350<span>indulge</span></h4>
+						<h4>$350<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>

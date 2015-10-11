@@ -32,12 +32,13 @@ public class LogoutController {
 			String firstDisplay = "";
 			String lastDisplay = "";
 			String emailDisplay = "";
-			ModelAndView mv = new ModelAndView("login", "command", new User());
+			ModelAndView mv = new ModelAndView("login");
 			mv.addObject("logsesh", logDisplay);
 			mv.addObject("dispFName", firstDisplay);
 			mv.addObject("dispLName", lastDisplay);
 			mv.addObject("dispEmail", emailDisplay);
-			return new ModelAndView("login");
+			mv.setViewName("login");
+			return mv;
 		
 	}
 }

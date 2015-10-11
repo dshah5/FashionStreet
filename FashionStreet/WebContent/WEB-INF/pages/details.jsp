@@ -82,13 +82,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
     				<c:when test="${not empty logsesh}">
-       					<li><a href="profile.jsp">${logsesh}</a></li> |
-    					<li><a href="logout">logout</a></li>
+       					<li><a href="/FashionStreet/profile">${logsesh}</a></li> |
+    					<li><a href="/FashionStreet/logout">logout</a></li>
     					
     				</c:when>
     				<c:otherwise>
-        				<li><a href="login.jsp">login</a></li> |
-						<li><a href="register.jsp">register</a></li>
+        				<li><a href="/FashionStreet/login">login</a></li> |
+						<li><a href="/FashionStreet/register">register</a></li>
     				</c:otherwise>
 				</c:choose>
 			</ul>
@@ -98,14 +98,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	          <nav class="nav">	        	
 	    	    <a href="#" id="w3-menu-trigger"> </a>
 	                  <ul class="nav-list" style="">
-	            	        <li class="nav-item"><a class="active" href="index.jsp">Home</a></li>
-							<li class="nav-item"><a href="handbags.jsp">Handbags</a></li>
-							<li class="nav-item"><a href="jewelry.jsp">jewelry</a></li>
-							<li class="nav-item"><a href="wallets.jsp">wallets</a></li>
-							<li class="nav-item"><a href="belts.jsp">belts</a></li>
-							<li class="nav-item"><a href="shoes.jsp">shoes</a></li>
-							<li class="nav-item"><a href="sale.jsp">sale</a></li>
-							<li class="nav-item"><a href="login.jsp">login</a></li>
+	            	        <li class="nav-item"><a class="active" href="/FashionStreet/home">Home</a></li>
+							<li class="nav-item"><a href="/FashionStreet/handbags">Handbags</a></li>
+							<li class="nav-item"><a href="/FashionStreet/jewelry">jewelry</a></li>
+							<li class="nav-item"><a href="/FashionStreet/wallets">wallets</a></li>
+							<li class="nav-item"><a href="/FashionStreet/belts">belts</a></li>
+							<li class="nav-item"><a href="/FashionStreet/shoes">shoes</a></li>
+							<li class="nav-item"><a href="/FashionStreet/sale">sale</a></li>
+							<li class="nav-item"><a href="/FashionStreet/login">login</a></li>
 	                 </ul>
 	           </nav>
 	             <div class="search_box">

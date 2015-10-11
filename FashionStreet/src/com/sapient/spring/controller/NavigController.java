@@ -17,10 +17,15 @@ public class NavigController {
 	public String homePage() {
 		return "home";
 	}
+	
+	@RequestMapping(value = "/profile", method = RequestMethod.GET)
+	public String profilePage() {
+		return "profile";
+	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public ModelAndView registerPage() {
-		return new ModelAndView("register", "regUser", new User());
+		return new ModelAndView("register","regUser", new User());
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

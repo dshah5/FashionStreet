@@ -82,14 +82,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="home.jsp"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
+			<a href="/FashionStreet/home"><img src="${pageContext.request.contextPath}/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="h_icon">
 		<ul class="icon1 sub-icon1">
 			<li><a class="active-icon c1" href="#"><i>$0</i></a>
 				<ul class="sub-icon1 list">
 					<li><h3>shopping cart empty</h3><a href=""></a></li>
-					<li><p>if items in your wish list are missing, <a href="contact.jsp">contact us</a> to view them</p></li>
+					<li><p>if items in your wish list are missing, <a href="/FashionStreet/contact">contact us</a> to view them</p></li>
 				</ul>
 			</li>
 		</ul>
@@ -110,23 +110,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="home.jsp">Home</a></li> |
-				<li><a href="handbags.jsp">handbags</a></li> |
-				<li><a href="jewelry.jsp">jewelry</a></li> |
-				<li><a href="wallets.jsp">wallets</a></li> |
-				<li><a href="belts.jsp">belts</a></li> |
-				<li><a href="shoes.jsp">shoes</a></li> |
-				<li><a href="sale.jsp">sale</a></li>
+				<li><a href="/FashionStreet/home">Home</a></li> |
+				<li><a href="/FashionStreet/handbags">handbags</a></li> |
+				<li><a href="/FashionStreet/jewelry">jewelry</a></li> |
+				<li><a href="/FashionStreet/wallets">wallets</a></li> |
+				<li><a href="/FashionStreet/belts">belts</a></li> |
+				<li><a href="/FashionStreet/shoes">shoes</a></li> |
+				<li><a href="/FashionStreet/sale">sale</a></li>
 				<c:set var="name" value="${sessionScope.userBean.firstName}"/>
 				<c:choose>
     				<c:when test="${not empty logsesh}">
-       					<li><a href="profile.jsp">${logsesh}</a></li> |
-    					<li><a href="logout">logout</a></li>
+       					<li><a href="/FashionStreet/profile">${logsesh}</a></li> |
+    					<li><a href="/FashionStreet/logout">logout</a></li>
     					
     				</c:when>
     				<c:otherwise>
-        				<li><a href="login.jsp">login</a></li> |
-						<li><a href="register.jsp">register</a></li>
+        				<li><a href="/FashionStreet/login">login</a></li> |
+						<li><a href="/FashionStreet/register">register</a></li>
     				</c:otherwise>
 				</c:choose>
 			</ul>
@@ -136,14 +136,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	          <nav class="nav">	        	
 	    	    <a href="#" id="w3-menu-trigger"> </a>
 	                  <ul class="nav-list" style="">
-	            	        <li class="nav-item"><a class="active" href="index.jsp">Home</a></li>
-							<li class="nav-item"><a href="handbags.jsp">Handbags</a></li>
-							<li class="nav-item"><a href="jewelry.jsp">jewelry</a></li>
-							<li class="nav-item"><a href="wallets.jsp">wallets</a></li>
-							<li class="nav-item"><a href="belts.jsp">belts</a></li>
-							<li class="nav-item"><a href="shoes.jsp">shoes</a></li>
-							<li class="nav-item"><a href="sale.jsp">sale</a></li>
-							<li class="nav-item"><a href="login.jsp">login</a></li>
+	            	        <li class="nav-item"><a class="active" href="/FashionStreet/index">Home</a></li>
+							<li class="nav-item"><a href="/FashionStreet/handbags">Handbags</a></li>
+							<li class="nav-item"><a href="/FashionStreet/jewelry">jewelry</a></li>
+							<li class="nav-item"><a href="/FashionStreet/wallets">wallets</a></li>
+							<li class="nav-item"><a href="/FashionStreet/belts">belts</a></li>
+							<li class="nav-item"><a href="/FashionStreet/shoes">shoes</a></li>
+							<li class="nav-item"><a href="/FashionStreet/sale">sale</a></li>
+							<li class="nav-item"><a href="/FashionStreet/login">login</a></li>
 	                 </ul>
 	           </nav>
 	             <div class="search_box">
@@ -175,7 +175,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div id="portfoliolist">
 			<div class="portfolio logo1" data-cat="logo">
 				<div class="portfolio-wrapper">				
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic1.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -189,7 +189,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>				
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">			
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic2.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -203,7 +203,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>		
 			<div class="portfolio web" data-cat="web">
 				<div class="portfolio-wrapper">						
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic3.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -217,7 +217,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>				
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic4.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -231,7 +231,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>	
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic5.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -245,7 +245,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>			
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic6.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -259,7 +259,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>	
 			<div class="portfolio web" data-cat="web">
 				<div class="portfolio-wrapper">						
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic7.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -273,7 +273,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>				
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic8.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -287,7 +287,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>	
 			<div class="portfolio app" data-cat="app">
 				<div class="portfolio-wrapper">
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic9.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -301,7 +301,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>			
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic10.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -316,7 +316,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					
 			<div class="portfolio card" data-cat="card">
 				<div class="portfolio-wrapper">			
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic11.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -331,7 +331,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div class="portfolio logo1" data-cat="logo">
 				<div class="portfolio-wrapper">			
-					<a  href="details.jsp">
+					<a  href="/FashionStreet/details">
 						<img src="${pageContext.request.contextPath}/images/sale_pic12.jpg"  alt="Image 2" />
 					</a>
 					<div class="label">
@@ -360,16 +360,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- start grids_of_4 -->	
 		<div class="grids_of_4">
 			<div class="grid1_of_4">
-				<h4><a href="contact.jsp">Contact Us</a></h4>
+				<h4><a href="/FashionStreet/contact">Contact Us</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.jsp">About F Street</a></h4>
+				<h4><a href="/FashionStreet/service">About F Street</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="service.jsp">Common Questions</a></h4>
+				<h4><a href="/FashionStreet/service">Common Questions</a></h4>
 			</div>
 			<div class="grid1_of_4">
-				<h4><a href="contact.jsp">Store Locator</a></h4>
+				<h4><a href="/FashionStreet/contact">Store Locator</a></h4>
 			</div>
 			<div class="clear"></div>
 		</div>

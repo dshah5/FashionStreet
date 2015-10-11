@@ -79,7 +79,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     				</c:when>
     				<c:otherwise>
         				<li><a href="login.jsp">login</a></li> |
-						<li><a href="register.jsp">register</a></li>
+						<li><a href="/FashionStreet/register">register</a></li>
     				</c:otherwise>
 				</c:choose>
 			</ul>

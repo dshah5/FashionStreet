@@ -124,7 +124,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h3>HUSHPUPPIES(12345)</h3>
 				
 					<div class="price">
-						<h4>$359<span>indulge</span></h4>
+						<h4>$359<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -134,7 +134,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/w_pic2.jpg" alt=""/>
 					<h3>HIDESIGN(11456)</h3>
 					<div class="price">
-						<h4>$499 <span>indulge</span></h4>
+						<h4>$499 <span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -144,7 +144,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/w_pic3.jpg" alt=""/>
 					<h3>ADDIDAS(65740)</h3>
 					<div class="price">
-						<h4>$299<span>indulge</span></h4>
+						<h4>$299<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -157,7 +157,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/w_pic4.jpg" alt=""/>
 					<h3>FOSSIL(76096)</h3>
 					<div class="price">
-						<h4>$599<span>indulge</span></h4>
+						<h4>$599<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -167,7 +167,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/w_pic5.jpg" alt=""/>
 					<h3>PUMA(60123)</h3>
 					<div class="price">
-						<h4>$229<span>indulge</span></h4>
+						<h4>$229<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
@@ -177,7 +177,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="${pageContext.request.contextPath}/images/w_pic6.jpg" alt=""/>
 					<h3>HAIKU(88006)</h3>
 					<div class="price">
-						<h4>$699<span>indulge</span></h4>
+						<h4>$699<span>add to cart</span></h4>
 					</div>
 					<span class="b_btm"></span>
 				</a>
