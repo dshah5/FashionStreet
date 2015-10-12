@@ -38,10 +38,10 @@ public class LoginController {
 		model.addAttribute("lName",user.getLastName());
 		ModelAndView mv = new ModelAndView();
 */
-		ModelAndView mv = new ModelAndView();
+		
 		if(user.validateLogin(user.getEmail(), user.getPassword())) {
 		
-			
+			ModelAndView mv = new ModelAndView();
 			mv.addObject("user", new User());
 			mv.addObject("logsesh", user.getFirstName());
 			mv.addObject("dispFName", user.getFirstName());
@@ -68,11 +68,11 @@ public class LoginController {
 		
 		//	System.out.println(user.getFirstName());
 			
-			
-			
+			ModelAndView mv = new ModelAndView("login","logUser",new User());
+			mv.addObject("errorMessage","incorrect username or password");
 			
 		
-			return new ModelAndView("login","logUser",new User());
+			return mv;
 		}
 	}
 }

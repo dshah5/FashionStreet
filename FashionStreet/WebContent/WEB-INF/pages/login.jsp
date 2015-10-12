@@ -112,12 +112,14 @@
 <div class="main">
 	 	 <div class="contact">				
 				  <div class="contact-form">
-				  		<c:set var="error" value="${sessionScope.errmessage}"/>
+				        <div style="text-align: center;color:red">
+				  		<c:set var="error" value="${errorMessage}"/>
 						<c:choose>
     						<c:when test="${not empty error}">
        							${error}
     						</c:when>
 						</c:choose>
+						</div>
 			 	  	 	<h2>Log In</h2>
 			 	 	    <form:form method="POST" commandName="logUser" action="/FashionStreet/log">
 							<div>

@@ -16,7 +16,7 @@ import com.sapient.model.User;
 
 @Controller
 @Scope("session")
-@SessionAttributes({"pID","quant","price"}) 
+@SessionAttributes({"pID","quant"}) 
 public class ViewcartController {
 	
 	@RequestMapping(value="/ViewCartController", method= RequestMethod.GET)
@@ -26,7 +26,7 @@ public class ViewcartController {
 	     AddCart cart= new AddCart();
 	    mv.addObject("pID",cart.getIDAllItems());
 	    mv.addObject("quant",cart.getQuantityOfIndividualItem());
-	    mv.addObject("price", cart.getTotalPrice());
+	 
 	    mv.addObject("cart", cart);
 		mv.setViewName("viewcart");
 		return mv;

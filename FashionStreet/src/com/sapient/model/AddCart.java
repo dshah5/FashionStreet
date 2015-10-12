@@ -283,8 +283,8 @@ public class AddCart {
 	    }
 		
 		
-		public int  getTotalPrice() {
-		//	Integer productId=0,quant=0;
+	public int  getTotalPrice() {
+		Integer productId=0,quant=0,price=0;
 			int totalprice=0;
 				SessionFactory factory = new Configuration().configure()
 						.buildSessionFactory();
@@ -297,11 +297,21 @@ public class AddCart {
 					List items= query.list();
 				  
 					for(Iterator it=items.iterator();it.hasNext();) {
-					
 						
 						Object[] row = (Object[]) it.next();
 						
-					totalprice +=(Integer) row[0];
+						productId =(Integer) row[0];
+						quant = (Integer) row[1];
+					
+					SQL_QUERY = "select price from Inventory where productId=:para1";
+					query = session.createQuery(SQL_QUERY);
+					query.setInteger("para1", productId);
+					List item= query.list();
+					Iterator it1=item.iterator();
+					Object[] row2 = (Object[]) it1.next();
+					price=((Integer) row2[0]);
+					
+					totalprice+=price*quant;
 						
 					}
 					return totalprice;
@@ -324,6 +334,6 @@ public class AddCart {
 		
 	    	
 	    }
-			
+		
 
 }
