@@ -316,7 +316,7 @@ public class AddCart {
 				} finally {
 					session.close();
 				}
-				return null;
+				return 0;
 			
 			
 			
