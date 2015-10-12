@@ -281,5 +281,49 @@ public class AddCart {
 		
 	    	
 	    }
+		
+		
+		public int  getTotalPrice() {
+		//	Integer productId=0,quant=0;
+			int totalprice=0;
+				SessionFactory factory = new Configuration().configure()
+						.buildSessionFactory();
+				Session session = factory.openSession();
+				Transaction tx=null;
+				try {
+					
+					String SQL_QUERY = "select productID, quantity from AddCart";
+					Query query = session.createQuery(SQL_QUERY);
+					List items= query.list();
+				  
+					for(Iterator it=items.iterator();it.hasNext();) {
+					
+						
+						Object[] row = (Object[]) it.next();
+						
+					totalprice +=(Integer) row[0];
+						
+					}
+					return totalprice;
+			
+			}
+				catch (HibernateException e) {
+
+					// TODO Auto-generated catch block
+					
+					    e.printStackTrace();
+					
+				} finally {
+					session.close();
+				}
+				return null;
+			
+			
+			
+			
+		
+	    	
+	    }
+			
 
 }

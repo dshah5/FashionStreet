@@ -159,7 +159,8 @@
 </c:forEach>
 	</div>
 </div>
-</div>	
+</div>
+<div><h1>${price}</h1></div>	
 <!-- start footer -->
 <div class="footer_bg">
 <div class="wrap">	

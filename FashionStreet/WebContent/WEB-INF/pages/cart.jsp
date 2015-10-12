@@ -74,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<c:choose>
     				<c:when test="${not empty logsesh}">
        					<li><a href="profile.jsp">${logsesh}</a></li> |
-    					<li><a href="logout">logout</a></li>
+    					<li><a href="/FashionStreet/out">logout</a></li>
     					
     				</c:when>
     				<c:otherwise>

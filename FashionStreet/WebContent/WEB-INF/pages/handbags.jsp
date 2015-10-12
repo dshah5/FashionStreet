@@ -74,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<c:choose>
     				<c:when test="${not empty logsesh}">
        					<li><a href="/FashionStreet/profile">${logsesh}</a></li> |
-    					<li><a href="/FashionStreet/logout">logout</a></li>
+    					<li><a href="/FashionStreet/out">logout</a></li>
     					
     				</c:when>
     				<c:otherwise>
